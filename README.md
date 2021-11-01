@@ -1,2 +1,1 @@
-# SmileGate_Blog
-[iOS] 블로그 개발
+# Smilegate_Blog
