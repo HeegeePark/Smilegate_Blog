@@ -11,3 +11,7 @@ Swift로 구현하는 iOS 블로그 앱
 - `chore`: 빌드 업무 수정, 패키지 매니저 수정
 - `docs`: 문서 수정
 - `test`: 누락된 테스트 추가, 생산적인 코드 생성 X
+
+## Architecture
+
+- MVVM 사용
