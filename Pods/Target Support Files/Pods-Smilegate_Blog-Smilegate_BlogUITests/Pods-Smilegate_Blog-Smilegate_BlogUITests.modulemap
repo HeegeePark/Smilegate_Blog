@@ -1,0 +1,6 @@
+framework module Pods_Smilegate_Blog_Smilegate_BlogUITests {
+  umbrella header "Pods-Smilegate_Blog-Smilegate_BlogUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

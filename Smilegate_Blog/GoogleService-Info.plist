@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>124662021424-nqmvve70erskf3ctfpmlgnri0e6lh9to.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.124662021424-nqmvve70erskf3ctfpmlgnri0e6lh9to</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD6k11dp19_AsO9okwThtJeqXIhkOKE2lY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>124662021424</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.heegee.Smilegate-Blog</string>
+	<key>PROJECT_ID</key>
+	<string>smilegate-39a86</string>
+	<key>STORAGE_BUCKET</key>
+	<string>smilegate-39a86.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:124662021424:ios:70d6e89a499704ba4fdcf5</string>
+</dict>
+</plist>
