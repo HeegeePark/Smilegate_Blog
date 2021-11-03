@@ -17,6 +17,7 @@
 		4F2F01C227316C54002C6452 /* Smilegate_BlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01C127316C54002C6452 /* Smilegate_BlogTests.swift */; };
 		4F2F01CC27316C54002C6452 /* Smilegate_BlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01CB27316C54002C6452 /* Smilegate_BlogUITests.swift */; };
 		4F2F01CE27316C54002C6452 /* Smilegate_BlogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01CD27316C54002C6452 /* Smilegate_BlogUITestsLaunchTests.swift */; };
+		4FC8DC1E2732569F008E2449 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC1D2732569F008E2449 /* .swiftlint.yml */; };
 		6307B75A7A754E3FF6737222 /* Pods_Smilegate_Blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3B53937A9784C12A625D91 /* Pods_Smilegate_Blog.framework */; };
 		A256791D67A1BB99099B1208 /* Pods_Smilegate_BlogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43148A7B26FE2022AB02CB8 /* Pods_Smilegate_BlogTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		4F2F01CB27316C54002C6452 /* Smilegate_BlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smilegate_BlogUITests.swift; sourceTree = "<group>"; };
 		4F2F01CD27316C54002C6452 /* Smilegate_BlogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smilegate_BlogUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4FC8DC1B27324A69008E2449 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FC8DC1D2732569F008E2449 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6A3B53937A9784C12A625D91 /* Pods_Smilegate_Blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smilegate_Blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F78598CAA69E4F282DA136 /* Pods-Smilegate_BlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smilegate_BlogTests.release.xcconfig"; path = "Target Support Files/Pods-Smilegate_BlogTests/Pods-Smilegate_BlogTests.release.xcconfig"; sourceTree = "<group>"; };
 		9103E6CB5DBDA1D46D34A218 /* Pods-Smilegate_Blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smilegate_Blog.release.xcconfig"; path = "Target Support Files/Pods-Smilegate_Blog/Pods-Smilegate_Blog.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		4F2F019E27316C51002C6452 = {
 			isa = PBXGroup;
 			children = (
+				4FC8DC1D2732569F008E2449 /* .swiftlint.yml */,
 				4F2F01A927316C51002C6452 /* Smilegate_Blog */,
 				4F2F01C027316C54002C6452 /* Smilegate_BlogTests */,
 				4F2F01CA27316C54002C6452 /* Smilegate_BlogUITests */,
@@ -181,6 +184,7 @@
 				4F2F01A427316C51002C6452 /* Frameworks */,
 				4F2F01A527316C51002C6452 /* Resources */,
 				42881D177A18F47D4175DB28 /* [CP] Embed Pods Frameworks */,
+				4FC8DC1C273250F5008E2449 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -278,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC8DC1E2732569F008E2449 /* .swiftlint.yml in Resources */,
 				4F2F01B727316C53002C6452 /* LaunchScreen.storyboard in Resources */,
 				4F2F01B427316C53002C6452 /* Assets.xcassets in Resources */,
 				4F2F01B227316C51002C6452 /* Main.storyboard in Resources */,
@@ -317,6 +322,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Smilegate_Blog/Pods-Smilegate_Blog-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		4FC8DC1C273250F5008E2449 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		5D9A1429843C66A0330C5FD2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
