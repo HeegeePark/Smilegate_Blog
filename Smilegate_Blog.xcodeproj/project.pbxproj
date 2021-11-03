@@ -10,7 +10,6 @@
 		1A7EBAEFCEC92CCE9FDFAE5E /* Pods_Smilegate_Blog_Smilegate_BlogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E21C1715A6E8E3B53B3B975 /* Pods_Smilegate_Blog_Smilegate_BlogUITests.framework */; };
 		4F2F01AB27316C51002C6452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AA27316C51002C6452 /* AppDelegate.swift */; };
 		4F2F01AD27316C51002C6452 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AC27316C51002C6452 /* SceneDelegate.swift */; };
-		4F2F01AF27316C51002C6452 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AE27316C51002C6452 /* ViewController.swift */; };
 		4F2F01B227316C51002C6452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F01B027316C51002C6452 /* Main.storyboard */; };
 		4F2F01B427316C53002C6452 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F01B327316C53002C6452 /* Assets.xcassets */; };
 		4F2F01B727316C53002C6452 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F01B527316C53002C6452 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,15 @@
 		4FC8DC2427328501008E2449 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC2327328501008E2449 /* Colors.xcassets */; };
 		4FC8DC272732893D008E2449 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC262732893D008E2449 /* UIColor+.swift */; };
 		4FC8DC2927328A80008E2449 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC2827328A80008E2449 /* UIFont+.swift */; };
+		4FC8DC2D27328CC2008E2449 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC2C27328CC2008E2449 /* MainTabBarController.swift */; };
+		4FC8DC3027329C8A008E2449 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC2F27329C8A008E2449 /* HomeViewController.swift */; };
+		4FC8DC3227329CB1008E2449 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC3127329CB1008E2449 /* Home.storyboard */; };
+		4FC8DC372732AC7C008E2449 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC362732AC7C008E2449 /* PostViewController.swift */; };
+		4FC8DC3B2732ACA1008E2449 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC3A2732ACA1008E2449 /* MypageViewController.swift */; };
+		4FC8DC3F2732AD9A008E2449 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC3E2732AD9A008E2449 /* Mypage.storyboard */; };
+		4FC8DC422732B59E008E2449 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC412732B59E008E2449 /* GoogleService-Info.plist */; };
+		4FC8DC452732B7D9008E2449 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC442732B7D9008E2449 /* WriteViewController.swift */; };
+		4FC8DC472732BA81008E2449 /* Write.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC462732BA81008E2449 /* Write.storyboard */; };
 		6307B75A7A754E3FF6737222 /* Pods_Smilegate_Blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3B53937A9784C12A625D91 /* Pods_Smilegate_Blog.framework */; };
 		A256791D67A1BB99099B1208 /* Pods_Smilegate_BlogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43148A7B26FE2022AB02CB8 /* Pods_Smilegate_BlogTests.framework */; };
 /* End PBXBuildFile section */
@@ -48,7 +56,6 @@
 		4F2F01A727316C51002C6452 /* Smilegate_Blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smilegate_Blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2F01AA27316C51002C6452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F2F01AC27316C51002C6452 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F2F01AE27316C51002C6452 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F2F01B127316C51002C6452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F2F01B327316C53002C6452 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F2F01B627316C53002C6452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,6 +70,15 @@
 		4FC8DC2327328501008E2449 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4FC8DC262732893D008E2449 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		4FC8DC2827328A80008E2449 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		4FC8DC2C27328CC2008E2449 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4FC8DC2F27329C8A008E2449 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4FC8DC3127329CB1008E2449 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		4FC8DC362732AC7C008E2449 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		4FC8DC3A2732ACA1008E2449 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		4FC8DC3E2732AD9A008E2449 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		4FC8DC412732B59E008E2449 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FC8DC442732B7D9008E2449 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		4FC8DC462732BA81008E2449 /* Write.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Write.storyboard; sourceTree = "<group>"; };
 		6A3B53937A9784C12A625D91 /* Pods_Smilegate_Blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smilegate_Blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F78598CAA69E4F282DA136 /* Pods-Smilegate_BlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smilegate_BlogTests.release.xcconfig"; path = "Target Support Files/Pods-Smilegate_BlogTests/Pods-Smilegate_BlogTests.release.xcconfig"; sourceTree = "<group>"; };
 		9103E6CB5DBDA1D46D34A218 /* Pods-Smilegate_Blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smilegate_Blog.release.xcconfig"; path = "Target Support Files/Pods-Smilegate_Blog/Pods-Smilegate_Blog.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,9 +152,11 @@
 		4F2F01A927316C51002C6452 /* Smilegate_Blog */ = {
 			isa = PBXGroup;
 			children = (
-				4FC8DC222732842A008E2449 /* Main */,
-				4FC8DC2027328387008E2449 /* SupportingFiles */,
+				4F2F01B827316C53002C6452 /* Info.plist */,
+				4FC8DC412732B59E008E2449 /* GoogleService-Info.plist */,
+				4FC8DC332732ABE2008E2449 /* Feature */,
 				4FC8DC1F2732832F008E2449 /* Extension */,
+				4FC8DC2027328387008E2449 /* SupportingFiles */,
 			);
 			path = Smilegate_Blog;
 			sourceTree = "<group>";
@@ -176,7 +194,6 @@
 				4F2F01B527316C53002C6452 /* LaunchScreen.storyboard */,
 				4F2F01AA27316C51002C6452 /* AppDelegate.swift */,
 				4F2F01AC27316C51002C6452 /* SceneDelegate.swift */,
-				4F2F01B827316C53002C6452 /* Info.plist */,
 				4FC8DC21273283D4008E2449 /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
@@ -185,8 +202,8 @@
 		4FC8DC222732842A008E2449 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				4F2F01AE27316C51002C6452 /* ViewController.swift */,
 				4F2F01B027316C51002C6452 /* Main.storyboard */,
+				4FC8DC2C27328CC2008E2449 /* MainTabBarController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -198,6 +215,53 @@
 				4F2F01B327316C53002C6452 /* Assets.xcassets */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		4FC8DC2E27329C6C008E2449 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8DC2F27329C8A008E2449 /* HomeViewController.swift */,
+				4FC8DC3127329CB1008E2449 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4FC8DC332732ABE2008E2449 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8DC432732B7B5008E2449 /* Write */,
+				4FC8DC222732842A008E2449 /* Main */,
+				4FC8DC2E27329C6C008E2449 /* Home */,
+				4FC8DC342732AC11008E2449 /* Post */,
+				4FC8DC352732AC2B008E2449 /* Mypage */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		4FC8DC342732AC11008E2449 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8DC362732AC7C008E2449 /* PostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		4FC8DC352732AC2B008E2449 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8DC3A2732ACA1008E2449 /* MypageViewController.swift */,
+				4FC8DC3E2732AD9A008E2449 /* Mypage.storyboard */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		4FC8DC432732B7B5008E2449 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8DC442732B7D9008E2449 /* WriteViewController.swift */,
+				4FC8DC462732BA81008E2449 /* Write.storyboard */,
+			);
+			path = Write;
 			sourceTree = "<group>";
 		};
 		5754AFB5A322D3E095BC9824 /* Pods */ = {
@@ -324,8 +388,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FC8DC2427328501008E2449 /* Colors.xcassets in Resources */,
+				4FC8DC422732B59E008E2449 /* GoogleService-Info.plist in Resources */,
+				4FC8DC472732BA81008E2449 /* Write.storyboard in Resources */,
+				4FC8DC3F2732AD9A008E2449 /* Mypage.storyboard in Resources */,
 				4FC8DC1E2732569F008E2449 /* .swiftlint.yml in Resources */,
 				4F2F01B727316C53002C6452 /* LaunchScreen.storyboard in Resources */,
+				4FC8DC3227329CB1008E2449 /* Home.storyboard in Resources */,
 				4F2F01B427316C53002C6452 /* Assets.xcassets in Resources */,
 				4F2F01B227316C51002C6452 /* Main.storyboard in Resources */,
 			);
@@ -472,11 +540,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F2F01AF27316C51002C6452 /* ViewController.swift in Sources */,
+				4FC8DC452732B7D9008E2449 /* WriteViewController.swift in Sources */,
 				4FC8DC272732893D008E2449 /* UIColor+.swift in Sources */,
 				4FC8DC2927328A80008E2449 /* UIFont+.swift in Sources */,
+				4FC8DC372732AC7C008E2449 /* PostViewController.swift in Sources */,
+				4FC8DC2D27328CC2008E2449 /* MainTabBarController.swift in Sources */,
 				4F2F01AB27316C51002C6452 /* AppDelegate.swift in Sources */,
 				4F2F01AD27316C51002C6452 /* SceneDelegate.swift in Sources */,
+				4FC8DC3027329C8A008E2449 /* HomeViewController.swift in Sources */,
+				4FC8DC3B2732ACA1008E2449 /* MypageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
