@@ -29,6 +29,7 @@
 		4FC8DC422732B59E008E2449 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC412732B59E008E2449 /* GoogleService-Info.plist */; };
 		4FC8DC452732B7D9008E2449 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC442732B7D9008E2449 /* WriteViewController.swift */; };
 		4FC8DC472732BA81008E2449 /* Write.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC462732BA81008E2449 /* Write.storyboard */; };
+		4FC8DC492732C828008E2449 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC482732C828008E2449 /* UIViewController+.swift */; };
 		6307B75A7A754E3FF6737222 /* Pods_Smilegate_Blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3B53937A9784C12A625D91 /* Pods_Smilegate_Blog.framework */; };
 		A256791D67A1BB99099B1208 /* Pods_Smilegate_BlogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E43148A7B26FE2022AB02CB8 /* Pods_Smilegate_BlogTests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		4FC8DC412732B59E008E2449 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FC8DC442732B7D9008E2449 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		4FC8DC462732BA81008E2449 /* Write.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Write.storyboard; sourceTree = "<group>"; };
+		4FC8DC482732C828008E2449 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		6A3B53937A9784C12A625D91 /* Pods_Smilegate_Blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smilegate_Blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F78598CAA69E4F282DA136 /* Pods-Smilegate_BlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smilegate_BlogTests.release.xcconfig"; path = "Target Support Files/Pods-Smilegate_BlogTests/Pods-Smilegate_BlogTests.release.xcconfig"; sourceTree = "<group>"; };
 		9103E6CB5DBDA1D46D34A218 /* Pods-Smilegate_Blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smilegate_Blog.release.xcconfig"; path = "Target Support Files/Pods-Smilegate_Blog/Pods-Smilegate_Blog.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 			children = (
 				4FC8DC262732893D008E2449 /* UIColor+.swift */,
 				4FC8DC2827328A80008E2449 /* UIFont+.swift */,
+				4FC8DC482732C828008E2449 /* UIViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 			files = (
 				4FC8DC452732B7D9008E2449 /* WriteViewController.swift in Sources */,
 				4FC8DC272732893D008E2449 /* UIColor+.swift in Sources */,
+				4FC8DC492732C828008E2449 /* UIViewController+.swift in Sources */,
 				4FC8DC2927328A80008E2449 /* UIFont+.swift in Sources */,
 				4FC8DC372732AC7C008E2449 /* PostViewController.swift in Sources */,
 				4FC8DC2D27328CC2008E2449 /* MainTabBarController.swift in Sources */,
