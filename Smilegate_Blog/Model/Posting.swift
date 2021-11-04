@@ -13,6 +13,7 @@ struct Posting: Codable {
     var userName: String
     var title: String
     var contents: String
+    let timestamp: TimeInterval
     var urlString: String = ""
     var image: URL?
     var comments: [Comment]
@@ -24,6 +25,7 @@ struct Posting: Codable {
                                    "userName": userName,
                                    "title": title,
                                    "contents": contents,
+                                   "timestamp": timestamp,
                                    "image": urlString,
                                    "comments": commentsArray,
                                    "likes": String(likes)]

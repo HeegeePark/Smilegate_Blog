@@ -8,8 +8,10 @@
 import Foundation
 
 struct Comment: Codable {
-    var id: String
+    let id: String
     var content: String
+    let timestamp: TimeInterval
+    
     
     var toDictionary: [String: Any] {
         let dict: [String: Any] = ["id": id, "content": content]
