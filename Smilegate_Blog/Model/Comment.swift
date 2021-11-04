@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+struct Comment: Codable {
+    var id: String
+    var content: String
+    
+    var toDictionary: [String: Any] {
+        let dict: [String: Any] = ["id": id, "content": content]
+        return dict
+    }
+}
