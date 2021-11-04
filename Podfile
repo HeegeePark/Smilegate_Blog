@@ -9,6 +9,7 @@ target 'Smilegate_Blog' do
   pod 'SwiftLint'
   pod 'Firebase/Analytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Storage'
 
   target 'Smilegate_BlogTests' do
     inherit! :search_paths
