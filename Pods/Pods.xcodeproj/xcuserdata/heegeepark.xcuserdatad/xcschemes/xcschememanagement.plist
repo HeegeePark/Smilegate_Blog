@@ -32,6 +32,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>FirebaseDatabase.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FirebaseInstallations.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -94,6 +99,11 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>13</integer>
+		</dict>
+		<key>leveldb-library.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>
