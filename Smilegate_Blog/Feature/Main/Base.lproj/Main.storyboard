@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wAF-UT-fRK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="73d-Us-EYm">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="wAF-UT-fRK" customClass="MainTabBarController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gou-2L-PjF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="selectedImageTintColor" name="baseColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ICn-Nh-6qk" kind="relationship" relationship="viewControllers" id="PaO-NL-cTs"/>
+                        <segue destination="k51-Ys-hbR" kind="relationship" relationship="viewControllers" id="mto-5o-3Nj"/>
+                        <segue destination="OhE-ak-hdt" kind="relationship" relationship="viewControllers" id="FJx-sk-Ssr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3p-kH-Rd1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1448" y="-42"/>
+        </scene>
+        <!--HomeViewController-->
+        <scene sceneID="EvZ-ye-Qtm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="HomeViewController" id="ICn-Nh-6qk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="czN-FT-FD1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hza-fh-GN7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2025" y="409"/>
+        </scene>
+        <!--WriteViewController-->
+        <scene sceneID="6D4-7A-VyN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Write" referencedIdentifier="WriteViewController" id="k51-Ys-hbR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="w1t-dT-bcD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjp-UF-7ZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1449" y="408"/>
+        </scene>
+        <!--MypageViewController-->
+        <scene sceneID="v8g-FI-cZe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mypage" referencedIdentifier="MypageViewController" id="OhE-ak-hdt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0q5-2q-kIy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41N-B9-pJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-886" y="409"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="baseColor">
+            <color red="0.0" green="0.63921568627450975" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -8,27 +8,23 @@
 import UIKit
 
 extension UIColor {
-    class var AccentColor: UIColor? {
-        UIColor(named: "AccentColor")
-    }
-    
-    class var LigthGrayColor: UIColor? {
-        UIColor(named: "LigthGrayColor")
-    }
-    
-    class var MidiumGrayColor: UIColor? {
-        UIColor(named: "MidiumGrayColor")
-    }
-    
-    class var TextBlackColor: UIColor? {
-        UIColor(named: "TextBlackColor")
-    }
-    
-    class var WhiteColor: UIColor? {
-        UIColor(named: "WhiteColor")
-    }
-    
-    class var MainBackgruondColor: UIColor? {
-        UIColor(named: "MainBackgruondColor")
-    }
+class var baseColor: UIColor? {
+    UIColor(named: "baseColor")
+}
+
+class var ligthGrayColor: UIColor? {
+    UIColor(named: "ligthGrayColor")
+}
+
+class var mediumGrayColor: UIColor? {
+    UIColor(named: "mediumGrayColor")
+}
+
+class var textBlackColor: UIColor? {
+    UIColor(named: "textBlackColor")
+}
+
+class var mainBackgruondColor: UIColor? {
+    UIColor(named: "mainBackgruondColor")
+}
 }

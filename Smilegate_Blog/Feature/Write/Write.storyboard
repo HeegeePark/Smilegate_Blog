@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--새로운 글쓰기-->
+        <scene sceneID="27t-r7-uJU">
+            <objects>
+                <viewController storyboardIdentifier="EditViewController" hidesBottomBarWhenPushed="YES" id="JdD-xw-R9j" customClass="EditViewController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RzD-nL-LWH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zeF-eC-4Gk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="새로운 글쓰기" id="l8l-cH-mxK">
+                        <barButtonItem key="leftBarButtonItem" title="취소" id="awa-v6-C76">
+                            <color key="tintColor" name="baseColor"/>
+                            <connections>
+                                <segue destination="szW-yd-riM" kind="modal" modalPresentationStyle="fullScreen" id="uHQ-nI-UhP"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="o7n-2K-h2k">
+                            <color key="tintColor" name="baseColor"/>
+                            <connections>
+                                <segue destination="QhI-Xp-Y2y" kind="modal" modalPresentationStyle="fullScreen" id="IKI-5c-rwS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R8e-IX-RUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2403" y="1191"/>
+        </scene>
+        <!--PostViewController-->
+        <scene sceneID="uun-gt-XlX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Post" referencedIdentifier="PostViewController" id="QhI-Xp-Y2y" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="roV-wo-gYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3237" y="1268"/>
+        </scene>
+        <!--MainTabBarController-->
+        <scene sceneID="k5f-g4-7pF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainTabBarController" id="szW-yd-riM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dPS-bx-kGr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byC-O3-dO2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3236" y="1037"/>
+        </scene>
+        <!--글쓰기-->
+        <scene sceneID="7h3-X7-sn7">
+            <objects>
+                <navigationController storyboardIdentifier="WriteViewController" id="cBw-sB-8st" customClass="WriteViewController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="글쓰기" image="pencil" catalog="system" id="oic-GB-n2C"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JYd-bP-shB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JdD-xw-R9j" kind="relationship" relationship="rootViewController" id="oI2-QA-iUO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lVF-HL-LTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1394" y="1191"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="baseColor">
+            <color red="0.0" green="0.63921568627450975" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
