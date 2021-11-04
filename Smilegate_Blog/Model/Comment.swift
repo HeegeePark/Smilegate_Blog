@@ -12,7 +12,6 @@ struct Comment: Codable {
     var content: String
     let timestamp: TimeInterval
     
-    
     var toDictionary: [String: Any] {
         let dict: [String: Any] = ["id": id, "content": content]
         return dict
