@@ -14,7 +14,7 @@ final class StorageManager {
     public typealias UploadImageCompletion = (Result<String, Error>) -> Void
 }
 
-// MARK: - Upload Image
+// MARK: - Upload&Download Image
 extension StorageManager {
     public func uploadImage(img: UIImage, identifier: String, path: String, completion: @escaping UploadImageCompletion) {
         var data = Data()
