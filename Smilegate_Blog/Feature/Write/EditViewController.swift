@@ -8,7 +8,7 @@
 import UIKit
 
 class EditViewController: UIViewController {
-    @IBOutlet weak var uploadButton: UIBarButtonItem!
+@IBOutlet weak var uploadButton: UIBarButtonItem!
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var contentsField: UITextField!
     @IBOutlet weak var cameraButton: UIButton!
@@ -18,5 +18,11 @@ class EditViewController: UIViewController {
     @IBAction func uploadButtonTapped(_ sender: Any) {
     }
     @IBAction func cameraButtonTapped(_ sender: Any) {
+    }
+    @IBAction func editingTitleStarted(_ sender: Any) {
+        self.titleField.textColor = .textBlackColor
+    }
+    @IBAction func editingContentseStarted(_ sender: Any) {
+        self.contentsField.textColor = .textBlackColor
     }
 }

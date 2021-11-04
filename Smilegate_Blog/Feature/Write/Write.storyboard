@@ -32,6 +32,9 @@
                                 <color key="textColor" name="hintGrayColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingTitleStarted:" destination="JdD-xw-R9j" eventType="editingDidBegin" id="DoN-t0-P58"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiN-3B-DsZ" userLabel="Title Line">
                                 <rect key="frame" x="25" y="157" width="364" height="1"/>
@@ -56,6 +59,9 @@
                                 <color key="textColor" name="hintGrayColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingContentseStarted:" destination="JdD-xw-R9j" eventType="editingDidBegin" id="eNx-k6-Hgd"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zeF-eC-4Gk"/>
