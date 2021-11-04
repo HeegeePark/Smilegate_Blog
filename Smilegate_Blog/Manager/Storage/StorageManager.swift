@@ -29,14 +29,14 @@ extension StorageManager {
             guard error == nil else {
                 // failed
                 print("image 업로드 실패")
-                completion(.failure(StorageErrors.failedToUpload))
+                completion(.failure(StorageError.failedToUpload))
                 return
             }
             
             strongSelf.storage.child(filePath).downloadURL { url, error in
                 guard let url = url else {
                     print("image url 다운로드 실패")
-                    completion(.failure(StorageErrors.failedToGetDownloadUrl))
+                    completion(.failure(StorageError.failedToGetDownloadUrl))
                     return
                 }
                 let urlString = url.absoluteString
@@ -44,11 +44,6 @@ extension StorageManager {
                 completion(.success(urlString))
             }
         })
-    }
-    
-    public enum StorageErrors: Error {
-        case failedToUpload
-        case failedToGetDownloadUrl
     }
 }
 
