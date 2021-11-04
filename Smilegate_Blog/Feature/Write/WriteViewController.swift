@@ -7,8 +7,12 @@
 
 import UIKit
 
-class WriteViewController: UIViewController {
+class WriteViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
+    }
+    func setUpUI() {
+        self.view.backgroundColor = .white
     }
 }

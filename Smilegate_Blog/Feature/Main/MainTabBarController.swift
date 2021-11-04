@@ -8,8 +8,11 @@
 import UIKit
 
 final class MainTabBarController: UITabBarController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.backgroundImage = UIImage()
+        self.tabBar.barStyle = .default
+        self.tabBar.barTintColor = .baseColor
+        self.tabBar.backgroundColor = .white
     }
 }

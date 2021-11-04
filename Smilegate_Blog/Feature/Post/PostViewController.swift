@@ -8,7 +8,14 @@
 import UIKit
 
 class PostViewController: UIViewController {
+    @IBOutlet weak var backButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    @IBAction func backButtonTapped(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let mainTBC = sb.instantiate("MainTabBarController")
+        mainTBC.modalPresentationStyle = .fullScreen
+        present(mainTBC, animated: true, completion: nil)
     }
 }

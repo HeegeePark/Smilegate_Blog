@@ -10,16 +10,16 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="73d-Us-EYm">
             <objects>
-                <tabBarController id="wAF-UT-fRK" customClass="MainTabBarController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="wAF-UT-fRK" customClass="MainTabBarController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gou-2L-PjF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="selectedImageTintColor" name="baseColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ICn-Nh-6qk" kind="relationship" relationship="viewControllers" id="fyS-5P-Yiv"/>
-                        <segue destination="k51-Ys-hbR" kind="relationship" relationship="viewControllers" id="ffb-8N-Vpn"/>
-                        <segue destination="OhE-ak-hdt" kind="relationship" relationship="viewControllers" id="BBa-Fi-SXm"/>
+                        <segue destination="ICn-Nh-6qk" kind="relationship" relationship="viewControllers" id="PaO-NL-cTs"/>
+                        <segue destination="k51-Ys-hbR" kind="relationship" relationship="viewControllers" id="mto-5o-3Nj"/>
+                        <segue destination="OhE-ak-hdt" kind="relationship" relationship="viewControllers" id="FJx-sk-Ssr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3p-kH-Rd1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
