@@ -45,5 +45,16 @@ extension StorageManager {
             }
         })
     }
+    
+    public func downloadImage(urlString: String) -> UIImage {
+        let url = URL(string: urlString)
+        let data = NSData(contentsOf: url!)
+        let image = UIImage(data: data! as Data)
+        
+        guard image != nil else {
+            return UIImage(named: "img_default")!
+        }
+        return image!
+    }
 }
 
