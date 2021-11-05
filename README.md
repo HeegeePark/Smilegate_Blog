@@ -16,6 +16,10 @@ Swift로 구현하는 iOS 블로그 앱
 
 - MVVM 사용
 
+## 사용 라이브러리
+- SwiftLint
+- Firebase
+
 ## 요구사항
 ###  필수 요구사항
 - [x] 메인 페이지
