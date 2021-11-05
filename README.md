@@ -15,3 +15,20 @@ Swift로 구현하는 iOS 블로그 앱
 ## Architecture
 
 - MVVM 사용
+
+## 요구사항
+###  필수 요구사항
+- [x] 메인 페이지
+- [x] 글 쓰기 수정 기능
+- [x] 글 목록 삭제 기능
+- [x] 댓글 기능
+
+### 부가 요구사항
+- [x] UI 디자인
+- [ ] 관리자 도구
+- [ ] Trackback
+- [ ] RSS
+
+
+## UI 구성
+<img src="https://user-images.githubusercontent.com/47033052/140451811-3353af37-4682-487f-b360-432de3502068.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140451585-2c92c703-13d8-41e2-aa50-bfd4831ce550.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140451588-36315607-35fa-4fec-b2f4-36f8bb2c3507.png" width="20%"/>
