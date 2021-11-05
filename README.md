@@ -29,6 +29,5 @@ Swift로 구현하는 iOS 블로그 앱
 - [ ] Trackback
 - [ ] RSS
 
-
 ## UI 구성
-<img src="https://user-images.githubusercontent.com/47033052/140451811-3353af37-4682-487f-b360-432de3502068.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140451585-2c92c703-13d8-41e2-aa50-bfd4831ce550.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140451588-36315607-35fa-4fec-b2f4-36f8bb2c3507.png" width="20%"/>
+<img src="https://user-images.githubusercontent.com/47033052/140451811-3353af37-4682-487f-b360-432de3502068.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140453156-ae4db57d-dabf-445c-80c4-c7ff1f35fac9.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140451585-2c92c703-13d8-41e2-aa50-bfd4831ce550.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140471998-e67347dd-fbe7-4293-ae8d-fd418bc732d2.png" width="20%"/>
