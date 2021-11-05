@@ -16,6 +16,14 @@
 		4F2F01C227316C54002C6452 /* Smilegate_BlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01C127316C54002C6452 /* Smilegate_BlogTests.swift */; };
 		4F2F01CC27316C54002C6452 /* Smilegate_BlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01CB27316C54002C6452 /* Smilegate_BlogUITests.swift */; };
 		4F2F01CE27316C54002C6452 /* Smilegate_BlogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01CD27316C54002C6452 /* Smilegate_BlogUITestsLaunchTests.swift */; };
+		4F59A4032733E6F500ECEB42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A4022733E6F500ECEB42 /* User.swift */; };
+		4F59A4052733E79F00ECEB42 /* Posting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A4042733E79F00ECEB42 /* Posting.swift */; };
+		4F59A4072733E8A500ECEB42 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A4062733E8A500ECEB42 /* Comment.swift */; };
+		4F59A40A2733F0E700ECEB42 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A4092733F0E700ECEB42 /* DatabaseManager.swift */; };
+		4F59A40C2733F2CE00ECEB42 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A40B2733F2CE00ECEB42 /* StorageManager.swift */; };
+		4F59A4102734263200ECEB42 /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A40F2734263200ECEB42 /* StorageError.swift */; };
+		4F59A4122734834100ECEB42 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A4112734834100ECEB42 /* WriteViewModel.swift */; };
+		4F59A41427349E4A00ECEB42 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A41327349E4A00ECEB42 /* PostViewModel.swift */; };
 		4FC8DC1E2732569F008E2449 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC1D2732569F008E2449 /* .swiftlint.yml */; };
 		4FC8DC2427328501008E2449 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC2327328501008E2449 /* Colors.xcassets */; };
 		4FC8DC272732893D008E2449 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC262732893D008E2449 /* UIColor+.swift */; };
@@ -68,6 +76,14 @@
 		4F2F01C727316C54002C6452 /* Smilegate_BlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Smilegate_BlogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2F01CB27316C54002C6452 /* Smilegate_BlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smilegate_BlogUITests.swift; sourceTree = "<group>"; };
 		4F2F01CD27316C54002C6452 /* Smilegate_BlogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smilegate_BlogUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4F59A4022733E6F500ECEB42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4F59A4042733E79F00ECEB42 /* Posting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posting.swift; sourceTree = "<group>"; };
+		4F59A4062733E8A500ECEB42 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		4F59A4092733F0E700ECEB42 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		4F59A40B2733F2CE00ECEB42 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		4F59A40F2734263200ECEB42 /* StorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageError.swift; sourceTree = "<group>"; };
+		4F59A4112734834100ECEB42 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
+		4F59A41327349E4A00ECEB42 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		4FC8DC1D2732569F008E2449 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4FC8DC21273283D4008E2449 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FC8DC2327328501008E2449 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -158,9 +174,11 @@
 		4F2F01A927316C51002C6452 /* Smilegate_Blog */ = {
 			isa = PBXGroup;
 			children = (
+				4FC8DC332732ABE2008E2449 /* Feature */,
+				4F59A4082733F0BE00ECEB42 /* Manager */,
+				4F59A4012733E6E500ECEB42 /* Model */,
 				4F2F01B827316C53002C6452 /* Info.plist */,
 				4FC8DC412732B59E008E2449 /* GoogleService-Info.plist */,
-				4FC8DC332732ABE2008E2449 /* Feature */,
 				4FC8DC1F2732832F008E2449 /* Extension */,
 				4FC8DC2027328387008E2449 /* SupportingFiles */,
 			);
@@ -182,6 +200,42 @@
 				4F2F01CD27316C54002C6452 /* Smilegate_BlogUITestsLaunchTests.swift */,
 			);
 			path = Smilegate_BlogUITests;
+			sourceTree = "<group>";
+		};
+		4F59A4012733E6E500ECEB42 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F59A4022733E6F500ECEB42 /* User.swift */,
+				4F59A4042733E79F00ECEB42 /* Posting.swift */,
+				4F59A4062733E8A500ECEB42 /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F59A4082733F0BE00ECEB42 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4F59A40E273425BD00ECEB42 /* Database */,
+				4F59A40D273425B500ECEB42 /* Storage */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4F59A40D273425B500ECEB42 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				4F59A40B2733F2CE00ECEB42 /* StorageManager.swift */,
+				4F59A40F2734263200ECEB42 /* StorageError.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		4F59A40E273425BD00ECEB42 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				4F59A4092733F0E700ECEB42 /* DatabaseManager.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		4FC8DC1F2732832F008E2449 /* Extension */ = {
@@ -250,6 +304,7 @@
 			children = (
 				4FC8DC362732AC7C008E2449 /* PostViewController.swift */,
 				4FC8DC532733B6AB008E2449 /* Post.storyboard */,
+				4F59A41327349E4A00ECEB42 /* PostViewModel.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -266,9 +321,10 @@
 		4FC8DC432732B7B5008E2449 /* Write */ = {
 			isa = PBXGroup;
 			children = (
-				4FC8DC442732B7D9008E2449 /* WriteViewController.swift */,
 				4FC8DC462732BA81008E2449 /* Write.storyboard */,
+				4FC8DC442732B7D9008E2449 /* WriteViewController.swift */,
 				4FC8DC502733AD5E008E2449 /* EditViewController.swift */,
+				4F59A4112734834100ECEB42 /* WriteViewModel.swift */,
 			);
 			path = Write;
 			sourceTree = "<group>";
@@ -550,17 +606,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F59A4122734834100ECEB42 /* WriteViewModel.swift in Sources */,
 				4FC8DC4D273389ED008E2449 /* UIStoryboard+.swift in Sources */,
 				4FC8DC452732B7D9008E2449 /* WriteViewController.swift in Sources */,
+				4F59A40A2733F0E700ECEB42 /* DatabaseManager.swift in Sources */,
 				4FC8DC272732893D008E2449 /* UIColor+.swift in Sources */,
+				4F59A4072733E8A500ECEB42 /* Comment.swift in Sources */,
 				4FC8DC2927328A80008E2449 /* UIFont+.swift in Sources */,
+				4F59A40C2733F2CE00ECEB42 /* StorageManager.swift in Sources */,
+				4F59A4052733E79F00ECEB42 /* Posting.swift in Sources */,
 				4FC8DC372732AC7C008E2449 /* PostViewController.swift in Sources */,
 				4FC8DC2D27328CC2008E2449 /* MainTabBarController.swift in Sources */,
 				4F2F01AB27316C51002C6452 /* AppDelegate.swift in Sources */,
+				4F59A4102734263200ECEB42 /* StorageError.swift in Sources */,
 				4FC8DC512733AD5E008E2449 /* EditViewController.swift in Sources */,
+				4F59A4032733E6F500ECEB42 /* User.swift in Sources */,
 				4F2F01AD27316C51002C6452 /* SceneDelegate.swift in Sources */,
 				4FC8DC3027329C8A008E2449 /* HomeViewController.swift in Sources */,
 				4FC8DC3B2732ACA1008E2449 /* MypageViewController.swift in Sources */,
+				4F59A41427349E4A00ECEB42 /* PostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
