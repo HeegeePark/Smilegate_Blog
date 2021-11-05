@@ -13,7 +13,16 @@ struct Comment: Codable {
     let timestamp: TimeInterval
     
     var toDictionary: [String: Any] {
-        let dict: [String: Any] = ["id": id, "content": content]
+        let dict: [String: Any] = ["id": id,
+                                   "content": content,
+                                   "timestamp": timestamp]
         return dict
     }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case content
+        case timestamp
+    }
+    static var id: Int = 0
 }

@@ -14,8 +14,7 @@ struct Posting: Codable {
     var title: String
     var contents: String
     let timestamp: TimeInterval
-    var urlString: String = ""
-    var image: URL?
+    var imageURL: String = ""
     var comments: [Comment]
     var likes: Int
     
@@ -26,10 +25,21 @@ struct Posting: Codable {
                                    "title": title,
                                    "contents": contents,
                                    "timestamp": timestamp,
-                                   "image": urlString,
+                                   "imageURL": imageURL,
                                    "comments": commentsArray,
                                    "likes": String(likes)]
         return dict
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case identifier
+        case userName
+        case title
+        case contents
+        case timestamp
+        case imageURL
+        case comments
+        case likes
     }
     static var identifier: Int = 0
 }

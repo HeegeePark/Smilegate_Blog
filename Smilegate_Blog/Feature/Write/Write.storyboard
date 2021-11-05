@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--새로운 글쓰기-->
+        <!--EditViewController-->
         <scene sceneID="27t-r7-uJU">
             <objects>
-                <viewController storyboardIdentifier="EditViewController" hidesBottomBarWhenPushed="YES" id="JdD-xw-R9j" customClass="EditViewController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" title="EditViewController" hidesBottomBarWhenPushed="YES" id="JdD-xw-R9j" customClass="EditViewController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RzD-nL-LWH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmX-9c-dIA">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmX-9c-dIA">
                                 <rect key="frame" x="26" y="114" width="362" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tcE-da-A5Q"/>
@@ -47,11 +47,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UQ-49-hoW">
-                                <rect key="frame" x="335" y="113.5" width="54" height="41"/>
+                                <rect key="frame" x="359" y="122.5" width="30" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6yC-HD-2NO"/>
+                                    <constraint firstAttribute="width" secondItem="7UQ-49-hoW" secondAttribute="height" multiplier="54:41" id="hcn-VV-ppc"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="ic_camera"/>
                                 <connections>
-                                    <action selector="cameraButtonTapped:" destination="JdD-xw-R9j" eventType="touchUpInside" id="Bu0-vu-005"/>
+                                    <action selector="takePicture:" destination="JdD-xw-R9j" eventType="touchUpInside" id="mfp-Ut-bF8"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="input contents" clearsOnBeginEditing="YES" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="hU5-aY-Wqx">
@@ -95,8 +99,7 @@
                         <barButtonItem key="rightBarButtonItem" title="등록" id="o7n-2K-h2k">
                             <color key="tintColor" name="baseColor"/>
                             <connections>
-                                <action selector="uploadButtonTapped:" destination="JdD-xw-R9j" id="2UJ-ng-L2T"/>
-                                <segue destination="QhI-Xp-Y2y" kind="modal" modalPresentationStyle="fullScreen" id="IKI-5c-rwS"/>
+                                <segue destination="QhI-Xp-Y2y" kind="modal" identifier="showPost" modalPresentationStyle="fullScreen" id="IKI-5c-rwS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8e-IX-RUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2574" y="1143"/>
+            <point key="canvasLocation" x="2572" y="1191"/>
         </scene>
         <!--PostViewController-->
         <scene sceneID="uun-gt-XlX">

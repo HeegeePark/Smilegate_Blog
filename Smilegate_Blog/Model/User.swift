@@ -12,9 +12,9 @@ struct User: Codable {
     let id: String
     var name: String
     var blogTitle: String
-    var urlString: String = ""
-    var mainImageUrl: URL
-    var profile: String
+    var profileURL: String = ""
+    var mainImageURL: String = ""
+    var introduce: String
     var postings: [Posting]
     
     var toDictionary: [String: Any] {
@@ -22,10 +22,11 @@ struct User: Codable {
         let dict: [String: Any] = ["id": id,
                                    "name": name,
                                    "blogTitle": blogTitle,
-                                   "mainImage": urlString,
-                                   "profile": profile,
-                                   "postings": postingsArray]
+                                   "profileURL": profileURL,
+                                   "mainImageURL": mainImageURL,
+                                   "introduce": introduce]
         return dict
     }
-    static var id: Int = 0
+    static var id: Int = 1
+    static var shared = User(id: "0", name: "heegee park", blogTitle: "Hello iOS", introduce: "과수원 주인이 될래요🌝", postings: [])
 }
