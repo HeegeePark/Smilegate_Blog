@@ -16,7 +16,7 @@ struct Posting: Codable {
     let timestamp: TimeInterval
     var imageURL: String = ""
     var comments: [Comment]
-    var likes: Int
+    var likes: String
     
     var toDictionary: [String: Any] {
         let commentsArray = comments.map { $0.toDictionary }
@@ -27,7 +27,7 @@ struct Posting: Codable {
                                    "timestamp": timestamp,
                                    "imageURL": imageURL,
                                    "comments": commentsArray,
-                                   "likes": String(likes)]
+                                   "likes": likes]
         return dict
     }
     
