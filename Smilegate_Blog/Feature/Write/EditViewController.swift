@@ -27,10 +27,14 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
                 let title = titleField.text ?? ""
                 let contents = contentsField.text ?? ""
                 let timestamp: Double = Date().timeIntervalSince1970.rounded()
-                let newPosting = Posting(identifier: String(Posting.identifier), userName: user.name, title: title, contents: contents, timestamp: timestamp, comments: [], likes: 0)
+                let emptyComment = Comment(id: "", content: "", timestamp: 0)
+                let newPosting = Posting(identifier: String(Posting.identifier), userName: user.name, title: title, contents: contents, timestamp: timestamp, comments: [emptyComment], likes: "0")
                 viewModel.update(model: newPosting)
-                if self.image != nil { viewModel.updateImage(image: self.image!) }
-                viewModel.updatePosting()
+                guard self.image != nil else {
+                    viewModel.updatePosting()
+                    return
+                }
+                viewModel.updateImage(image: self.image!)
             case .modify:
                 viewModel.posting?.title = titleField.text ?? ""
                 viewModel.posting?.contents = contentsField.text ?? ""

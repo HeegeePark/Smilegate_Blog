@@ -19,7 +19,7 @@ class WriteViewModel {
     func updatePosting() {
         let user = User.shared
         let dbManager = DatabaseManager.shared
-        dbManager.updatePosting(user, posting!)
+        dbManager.updatePosting(posting!)
         Posting.identifier += 1
     }
     func updateImage(image: UIImage) {
@@ -28,6 +28,7 @@ class WriteViewModel {
             switch result {
             case .success(let downloadUrl):
                 self.posting!.imageURL = downloadUrl
+                self.updatePosting()
             case .failure(let error):
                 print("storage manager error: \(error)")
             }
