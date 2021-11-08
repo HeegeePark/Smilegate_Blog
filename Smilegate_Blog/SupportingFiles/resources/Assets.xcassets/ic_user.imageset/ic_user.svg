@@ -1,0 +1,10 @@
+<svg id="account-circle" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00a388;
+      }
+    </style>
+  </defs>
+  <path id="account-circle-2" data-name="account-circle" class="cls-1" d="M25.5,41.7A16.272,16.272,0,0,1,12,34.5c.068-4.5,9-6.975,13.5-6.975S38.932,30,39,34.5a16.272,16.272,0,0,1-13.5,7.2m0-31.95a6.75,6.75,0,1,1-6.75,6.75A6.75,6.75,0,0,1,25.5,9.75M25.5,3A22.5,22.5,0,1,0,48,25.5,22.5,22.5,0,0,0,25.5,3Z" transform="translate(-3 -3)"/>
+</svg>
