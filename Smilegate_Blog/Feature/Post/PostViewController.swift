@@ -9,6 +9,7 @@ import UIKit
 
 class PostViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
+    let viewModel = PostViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
     }

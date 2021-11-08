@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,21 +16,122 @@
                     <view key="view" contentMode="scaleToFill" id="Qzo-uy-CUT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smilegate Blog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKo-8s-QrG">
+                                <rect key="frame" x="20" y="59" width="198.5" height="36"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <color key="textColor" name="baseColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ajg-Y1-jxn">
+                                <rect key="frame" x="20" y="110" width="374" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" name="mainBackgruondColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HomeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="171" id="UmV-Yl-RSf" customClass="HomeCell" customModule="Smilegate_Blog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="171"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UmV-Yl-RSf" id="pnd-Wu-uWN">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="171"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_post_cell" translatesAutoresizingMaskIntoConstraints="NO" id="ppW-P1-cXv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="171"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_smilegate" translatesAutoresizingMaskIntoConstraints="NO" id="hww-cs-kUU">
+                                                    <rect key="frame" x="10" y="30" width="100" height="111"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="HMr-qc-SVg"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 일기" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3W-yI-Lpa">
+                                                    <rect key="frame" x="120" y="30" width="244" height="26.5"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                                    <color key="textColor" name="textBlackColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user" translatesAutoresizingMaskIntoConstraints="NO" id="0uG-MB-Bqo">
+                                                    <rect key="frame" x="120" y="121" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="GRU-A0-FJv"/>
+                                                        <constraint firstAttribute="width" secondItem="0uG-MB-Bqo" secondAttribute="height" multiplier="1:1" id="xyj-Ch-2Sb"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heegee Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HB-Bh-14Y">
+                                                    <rect key="frame" x="145" y="123" width="70.5" height="16"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" name="textBlackColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="j3W-yI-Lpa" firstAttribute="top" secondItem="hww-cs-kUU" secondAttribute="top" id="9DP-sG-sXC"/>
+                                                <constraint firstAttribute="bottom" secondItem="hww-cs-kUU" secondAttribute="bottom" constant="30" id="JMh-Ul-8gi"/>
+                                                <constraint firstItem="ppW-P1-cXv" firstAttribute="leading" secondItem="pnd-Wu-uWN" secondAttribute="leading" id="NT8-Vd-CfO"/>
+                                                <constraint firstAttribute="trailing" secondItem="j3W-yI-Lpa" secondAttribute="trailing" constant="10" id="PhA-ZM-Zvs"/>
+                                                <constraint firstItem="j3W-yI-Lpa" firstAttribute="leading" secondItem="hww-cs-kUU" secondAttribute="trailing" constant="10" id="QJm-SS-USU"/>
+                                                <constraint firstItem="1HB-Bh-14Y" firstAttribute="leading" secondItem="0uG-MB-Bqo" secondAttribute="trailing" constant="5" id="Wmq-3S-g15"/>
+                                                <constraint firstItem="0uG-MB-Bqo" firstAttribute="leading" secondItem="j3W-yI-Lpa" secondAttribute="leading" id="dbt-b5-190"/>
+                                                <constraint firstItem="1HB-Bh-14Y" firstAttribute="centerY" secondItem="0uG-MB-Bqo" secondAttribute="centerY" id="hpY-88-cbN"/>
+                                                <constraint firstItem="0uG-MB-Bqo" firstAttribute="bottom" secondItem="hww-cs-kUU" secondAttribute="bottom" id="kMg-ex-KVl"/>
+                                                <constraint firstItem="hww-cs-kUU" firstAttribute="top" secondItem="pnd-Wu-uWN" secondAttribute="top" constant="30" id="mWc-UJ-wgd"/>
+                                                <constraint firstItem="hww-cs-kUU" firstAttribute="leading" secondItem="pnd-Wu-uWN" secondAttribute="leading" constant="10" id="rB8-PY-hky"/>
+                                                <constraint firstAttribute="bottom" secondItem="ppW-P1-cXv" secondAttribute="bottom" id="v8L-FO-gYw"/>
+                                                <constraint firstItem="ppW-P1-cXv" firstAttribute="top" secondItem="pnd-Wu-uWN" secondAttribute="top" id="xUY-4u-plQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="ppW-P1-cXv" secondAttribute="trailing" id="xwf-yc-bkA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgView" destination="hww-cs-kUU" id="o45-kz-r01"/>
+                                            <outlet property="nameLabel" destination="1HB-Bh-14Y" id="jwb-O0-wxV"/>
+                                            <outlet property="titleLabel" destination="j3W-yI-Lpa" id="X5e-b2-rFr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zGg-Yi-zGg" id="fyB-bf-EXk"/>
+                                    <outlet property="delegate" destination="zGg-Yi-zGg" id="1GC-Zo-LH9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ekW-eR-0YA"/>
                         <color key="backgroundColor" name="mainBackgruondColor"/>
+                        <constraints>
+                            <constraint firstItem="ajg-Y1-jxn" firstAttribute="centerX" secondItem="ekW-eR-0YA" secondAttribute="centerX" id="2xH-B2-U9E"/>
+                            <constraint firstItem="ajg-Y1-jxn" firstAttribute="top" secondItem="bKo-8s-QrG" secondAttribute="bottom" constant="15" id="37R-ti-2zh"/>
+                            <constraint firstItem="ekW-eR-0YA" firstAttribute="bottom" secondItem="ajg-Y1-jxn" secondAttribute="bottom" id="EO2-i9-R5l"/>
+                            <constraint firstItem="ajg-Y1-jxn" firstAttribute="leading" secondItem="ekW-eR-0YA" secondAttribute="leading" constant="20" id="FJJ-0E-FRF"/>
+                            <constraint firstItem="bKo-8s-QrG" firstAttribute="top" secondItem="ekW-eR-0YA" secondAttribute="top" constant="15" id="fE4-vy-dAI"/>
+                            <constraint firstItem="bKo-8s-QrG" firstAttribute="leading" secondItem="ekW-eR-0YA" secondAttribute="leading" constant="20" id="lNP-sO-C0c"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="house.fill" catalog="system" id="Cvv-7H-fCc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="postTableView" destination="ajg-Y1-jxn" id="XMA-jg-muU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebo-KR-abX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="-47"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-47.544642857142854"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bg_post_cell" width="385" height="213"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="ic_user" width="45" height="45"/>
+        <image name="img_smilegate" width="915" height="929"/>
+        <namedColor name="baseColor">
+            <color red="0.0" green="0.63921568627450975" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mainBackgruondColor">
             <color red="0.98039215686274506" green="1" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="textBlackColor">
+            <color red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

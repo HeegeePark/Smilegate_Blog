@@ -9,15 +9,85 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--새로운 글쓰기-->
+        <!--EditViewController-->
         <scene sceneID="27t-r7-uJU">
             <objects>
-                <viewController storyboardIdentifier="EditViewController" hidesBottomBarWhenPushed="YES" id="JdD-xw-R9j" customClass="EditViewController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditViewController" title="EditViewController" hidesBottomBarWhenPushed="YES" id="JdD-xw-R9j" customClass="EditViewController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RzD-nL-LWH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lz-HG-hs2" userLabel="Bar Line">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1"/>
+                                <color key="backgroundColor" name="MediumGrayColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rmX-9c-dIA">
+                                <rect key="frame" x="26" y="114" width="362" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tcE-da-A5Q"/>
+                                </constraints>
+                                <color key="textColor" name="hintGrayColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingTitleStarted:" destination="JdD-xw-R9j" eventType="editingDidBegin" id="DoN-t0-P58"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiN-3B-DsZ" userLabel="Title Line">
+                                <rect key="frame" x="25" y="157" width="364" height="1"/>
+                                <color key="backgroundColor" name="hintGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="f77-75-ICW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UQ-49-hoW">
+                                <rect key="frame" x="359" y="122.5" width="30" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="6yC-HD-2NO"/>
+                                    <constraint firstAttribute="width" secondItem="7UQ-49-hoW" secondAttribute="height" multiplier="54:41" id="hcn-VV-ppc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ic_camera"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="JdD-xw-R9j" eventType="touchUpInside" id="mfp-Ut-bF8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" text="input contents" clearsOnBeginEditing="YES" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="hU5-aY-Wqx">
+                                <rect key="frame" x="26" y="181.5" width="362" height="631.5"/>
+                                <color key="textColor" name="hintGrayColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="editingContentseStarted:" destination="JdD-xw-R9j" eventType="editingDidBegin" id="eNx-k6-Hgd"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zeF-eC-4Gk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QiN-3B-DsZ" firstAttribute="centerX" secondItem="rmX-9c-dIA" secondAttribute="centerX" id="46i-eb-AlH"/>
+                            <constraint firstItem="hU5-aY-Wqx" firstAttribute="top" secondItem="QiN-3B-DsZ" secondAttribute="bottom" constant="23.5" id="64U-o4-jZd"/>
+                            <constraint firstItem="2Lz-HG-hs2" firstAttribute="leading" secondItem="zeF-eC-4Gk" secondAttribute="leading" id="8g7-s1-fLh"/>
+                            <constraint firstItem="QiN-3B-DsZ" firstAttribute="width" secondItem="rmX-9c-dIA" secondAttribute="width" multiplier="1.00552" id="9N4-BX-gJG"/>
+                            <constraint firstItem="7UQ-49-hoW" firstAttribute="centerY" secondItem="rmX-9c-dIA" secondAttribute="centerY" id="DIw-8A-5S4"/>
+                            <constraint firstItem="zeF-eC-4Gk" firstAttribute="trailing" secondItem="rmX-9c-dIA" secondAttribute="trailing" constant="26" id="KeD-I4-Nmd"/>
+                            <constraint firstItem="zeF-eC-4Gk" firstAttribute="trailing" secondItem="2Lz-HG-hs2" secondAttribute="trailing" id="KqV-lF-pHE"/>
+                            <constraint firstItem="hU5-aY-Wqx" firstAttribute="leading" secondItem="zeF-eC-4Gk" secondAttribute="leading" constant="26" id="c3h-KN-PI4"/>
+                            <constraint firstItem="rmX-9c-dIA" firstAttribute="top" secondItem="2Lz-HG-hs2" secondAttribute="bottom" constant="25" id="ftW-fe-N9t"/>
+                            <constraint firstItem="2Lz-HG-hs2" firstAttribute="top" secondItem="zeF-eC-4Gk" secondAttribute="top" id="gBZ-US-1k6"/>
+                            <constraint firstItem="rmX-9c-dIA" firstAttribute="leading" secondItem="zeF-eC-4Gk" secondAttribute="leading" constant="26" id="h7A-ll-wNZ"/>
+                            <constraint firstItem="7UQ-49-hoW" firstAttribute="trailing" secondItem="QiN-3B-DsZ" secondAttribute="trailing" id="kiz-Tc-b9e"/>
+                            <constraint firstItem="zeF-eC-4Gk" firstAttribute="bottom" secondItem="hU5-aY-Wqx" secondAttribute="bottom" id="mfp-EA-Zqu"/>
+                            <constraint firstItem="QiN-3B-DsZ" firstAttribute="top" secondItem="rmX-9c-dIA" secondAttribute="bottom" constant="3" id="rTN-YO-cyB"/>
+                            <constraint firstItem="2Lz-HG-hs2" firstAttribute="height" secondItem="RzD-nL-LWH" secondAttribute="height" multiplier="0.00111607" id="sW4-C1-nye"/>
+                            <constraint firstItem="zeF-eC-4Gk" firstAttribute="trailing" secondItem="hU5-aY-Wqx" secondAttribute="trailing" constant="26" id="yIu-UN-5Ma"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="새로운 글쓰기" id="l8l-cH-mxK">
                         <barButtonItem key="leftBarButtonItem" title="취소" id="awa-v6-C76">
@@ -29,14 +99,20 @@
                         <barButtonItem key="rightBarButtonItem" title="등록" id="o7n-2K-h2k">
                             <color key="tintColor" name="baseColor"/>
                             <connections>
-                                <segue destination="QhI-Xp-Y2y" kind="modal" modalPresentationStyle="fullScreen" id="IKI-5c-rwS"/>
+                                <segue destination="QhI-Xp-Y2y" kind="modal" identifier="showPost" modalPresentationStyle="fullScreen" id="IKI-5c-rwS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cameraButton" destination="7UQ-49-hoW" id="y6z-ch-zxH"/>
+                        <outlet property="contentsField" destination="hU5-aY-Wqx" id="HOY-KY-tD8"/>
+                        <outlet property="titleField" destination="rmX-9c-dIA" id="cMu-Pa-JaL"/>
+                        <outlet property="uploadButton" destination="o7n-2K-h2k" id="PXz-Qz-O2M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R8e-IX-RUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2403" y="1191"/>
+            <point key="canvasLocation" x="2572" y="1191"/>
         </scene>
         <!--PostViewController-->
         <scene sceneID="uun-gt-XlX">
@@ -76,9 +152,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_camera" width="30" height="27.391000747680664"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
+        <namedColor name="MediumGrayColor">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="baseColor">
             <color red="0.0" green="0.63921568627450975" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hintGrayColor">
+            <color red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
