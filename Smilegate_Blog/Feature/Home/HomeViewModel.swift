@@ -6,3 +6,24 @@
 //
 
 import Foundation
+
+class HomeViewModel {
+    let manager = DatabaseManager.shared
+    var postingList: [Posting] = []
+    
+    // timestamp 기준 내림차순 정렬
+    var sortedList: [Posting] {
+        let sortedList = postingList.sorted { prev, next in
+            return prev.timestamp > next.timestamp
+        }
+        return sortedList
+    }
+    
+    var numOfPostingList: Int {
+        return postingList.count
+    }
+    
+    func posting(at index: Int) -> Posting {
+        return sortedList[index]
+    }
+}
