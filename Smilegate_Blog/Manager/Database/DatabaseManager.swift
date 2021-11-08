@@ -33,13 +33,13 @@ extension DatabaseManager {
                 let postings: [Posting] = try decoder.decode([Posting].self, from: data)
                 completion(postings)
             } catch let error {
-                print("--> error: \(error.localizedDescription)")
+                print("--> error: \(error)")
                 completion([])
             }
         }
     }
     
-    public func updatePosting(_ user: User, _ posting: Posting) {
+    public func updatePosting(_ posting: Posting) {
         // posting db에 업뎃
         database.child("posting").child(posting.identifier).setValue(posting.toDictionary)
     }
