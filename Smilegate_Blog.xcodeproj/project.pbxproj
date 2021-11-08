@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A7EBAEFCEC92CCE9FDFAE5E /* Pods_Smilegate_Blog_Smilegate_BlogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E21C1715A6E8E3B53B3B975 /* Pods_Smilegate_Blog_Smilegate_BlogUITests.framework */; };
+		4F2404BE2737C07D008282F4 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404BD2737C07D008282F4 /* HomeCell.swift */; };
 		4F2F01AB27316C51002C6452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AA27316C51002C6452 /* AppDelegate.swift */; };
 		4F2F01AD27316C51002C6452 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AC27316C51002C6452 /* SceneDelegate.swift */; };
 		4F2F01B227316C51002C6452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F01B027316C51002C6452 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		4F59A4102734263200ECEB42 /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A40F2734263200ECEB42 /* StorageError.swift */; };
 		4F59A4122734834100ECEB42 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A4112734834100ECEB42 /* WriteViewModel.swift */; };
 		4F59A41427349E4A00ECEB42 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F59A41327349E4A00ECEB42 /* PostViewModel.swift */; };
+		4FA559A32734CA1600193FDB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA559A22734CA1600193FDB /* HomeViewModel.swift */; };
 		4FC8DC1E2732569F008E2449 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC1D2732569F008E2449 /* .swiftlint.yml */; };
 		4FC8DC2427328501008E2449 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8DC2327328501008E2449 /* Colors.xcassets */; };
 		4FC8DC272732893D008E2449 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8DC262732893D008E2449 /* UIColor+.swift */; };
@@ -64,6 +66,7 @@
 /* Begin PBXFileReference section */
 		0E21C1715A6E8E3B53B3B975 /* Pods_Smilegate_Blog_Smilegate_BlogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smilegate_Blog_Smilegate_BlogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		154EFFF26747A7687DC1D201 /* Pods-Smilegate_BlogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smilegate_BlogTests.debug.xcconfig"; path = "Target Support Files/Pods-Smilegate_BlogTests/Pods-Smilegate_BlogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4F2404BD2737C07D008282F4 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		4F2F01A727316C51002C6452 /* Smilegate_Blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smilegate_Blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2F01AA27316C51002C6452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F2F01AC27316C51002C6452 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +87,7 @@
 		4F59A40F2734263200ECEB42 /* StorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageError.swift; sourceTree = "<group>"; };
 		4F59A4112734834100ECEB42 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
 		4F59A41327349E4A00ECEB42 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		4FA559A22734CA1600193FDB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		4FC8DC1D2732569F008E2449 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4FC8DC21273283D4008E2449 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FC8DC2327328501008E2449 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -283,6 +287,8 @@
 			children = (
 				4FC8DC2F27329C8A008E2449 /* HomeViewController.swift */,
 				4FC8DC3127329CB1008E2449 /* Home.storyboard */,
+				4FA559A22734CA1600193FDB /* HomeViewModel.swift */,
+				4F2404BD2737C07D008282F4 /* HomeCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -607,8 +613,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F59A4122734834100ECEB42 /* WriteViewModel.swift in Sources */,
+				4F2404BE2737C07D008282F4 /* HomeCell.swift in Sources */,
 				4FC8DC4D273389ED008E2449 /* UIStoryboard+.swift in Sources */,
 				4FC8DC452732B7D9008E2449 /* WriteViewController.swift in Sources */,
+				4FA559A32734CA1600193FDB /* HomeViewModel.swift in Sources */,
 				4F59A40A2733F0E700ECEB42 /* DatabaseManager.swift in Sources */,
 				4FC8DC272732893D008E2449 /* UIColor+.swift in Sources */,
 				4F59A4072733E8A500ECEB42 /* Comment.swift in Sources */,
