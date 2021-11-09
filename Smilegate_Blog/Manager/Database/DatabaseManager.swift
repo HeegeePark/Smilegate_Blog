@@ -68,13 +68,13 @@ extension DatabaseManager {
         }
     }
     
-    func updateComment(postingId: Int, comment: Comment) {
-        let dbPath = "posting/\(String(postingId))/comments/\(String(comment.id))"
+    func updateComment(postingId: String, comment: Comment) {
+        let dbPath = "posting/\(postingId)/comments/\(comment.id))"
         database.child(dbPath).setValue(comment.toDictionary)
     }
     
-    func deleteComment(postingId: Int, id: Int) {
-        let dbPath = "posting/\(String(postingId))/comments/\(String(id))"
+    func deleteComment(postingId: String, id: String) {
+        let dbPath = "posting/\(postingId))/comments/\(id))"
         database.child(dbPath).removeValue()
     }
 }
