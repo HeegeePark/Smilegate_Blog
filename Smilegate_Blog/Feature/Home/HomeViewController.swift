@@ -22,11 +22,7 @@ class HomeViewController: UIViewController {
             }
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        // 게시물 뷰모델에 불러오기
-//        viewModel.update()
-//        postTableView.reloadData()
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchPosts()
@@ -36,6 +32,7 @@ class HomeViewController: UIViewController {
     func fetchPosts() {
         DatabaseManager.shared.fetchPosting { postings in
             self.viewModel.postingList = postings
+            Posting.identifier = self.viewModel.numOfPostingList
             self.postTableView.refreshControl?.endRefreshing()
             self.postTableView.reloadData()
         }
