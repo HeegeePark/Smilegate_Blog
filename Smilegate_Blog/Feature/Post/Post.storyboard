@@ -268,7 +268,9 @@ Meteor 거대 meteor
                         <outlet property="likesButton" destination="ynZ-da-YLq" id="v3J-L8-uqf"/>
                         <outlet property="likesNumLabel" destination="xmY-Of-uG0" id="Ne8-7J-oDu"/>
                         <outlet property="nameLabel" destination="jS6-oM-VE1" id="Kow-1m-ZsJ"/>
+                        <outlet property="postLine" destination="OrW-4d-yop" id="7oM-yI-M45"/>
                         <outlet property="titleLabel" destination="1K7-xo-B2b" id="x7W-Pt-ZsG"/>
+                        <outlet property="userImageView" destination="urD-PW-f9l" id="gfB-OF-Yzb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
