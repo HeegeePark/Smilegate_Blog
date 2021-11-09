@@ -17,6 +17,7 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
     let viewModel = WriteViewModel()
     let user = User.shared
     var image: UIImage? = nil
+    var id = 3
     // segue 수행 직전 준비하는 함수
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(3)
@@ -28,13 +29,12 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
                 let contents = contentsField.text ?? ""
                 let timestamp: Double = Date().timeIntervalSince1970.rounded()
                 let emptyComment = Comment(id: "", content: "", timestamp: 0)
-                let newPosting = Posting(identifier: String(Posting.identifier), userName: user.name, title: title, contents: contents, timestamp: timestamp, comments: [emptyComment], likes: "0")
+                let newPosting = Posting(identifier: String(self.id), userName: user.name, title: title, contents: contents, timestamp: timestamp, comments: [emptyComment], likes: "0")
                 viewModel.update(model: newPosting)
-                guard self.image != nil else {
-                    viewModel.updatePosting()
-                    return
+                if self.image != nil {
+                    viewModel.updateImage(image: self.image!)
                 }
-                viewModel.updateImage(image: self.image!)
+                viewModel.updatePosting()
             case .modify:
                 viewModel.posting?.title = titleField.text ?? ""
                 viewModel.posting?.contents = contentsField.text ?? ""

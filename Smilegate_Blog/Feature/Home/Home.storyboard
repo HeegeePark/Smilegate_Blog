@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +24,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ajg-Y1-jxn">
                                 <rect key="frame" x="20" y="110" width="374" height="703"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="mainBackgruondColor"/>
                                 <color key="sectionIndexBackgroundColor" name="mainBackgruondColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HomeCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="171" id="UmV-Yl-RSf" customClass="HomeCell" customModule="Smilegate_Blog" customModuleProvider="target">
@@ -85,6 +84,7 @@
                                             <outlet property="imgView" destination="hww-cs-kUU" id="o45-kz-r01"/>
                                             <outlet property="nameLabel" destination="1HB-Bh-14Y" id="jwb-O0-wxV"/>
                                             <outlet property="titleLabel" destination="j3W-yI-Lpa" id="X5e-b2-rFr"/>
+                                            <segue destination="3Ep-pZ-5xT" kind="modal" identifier="showPost" trigger="accessoryAction" modalPresentationStyle="fullScreen" id="YcA-RC-mWg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -115,6 +115,16 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="-47.544642857142854"/>
         </scene>
+        <!--PostViewController-->
+        <scene sceneID="0Ba-xv-ycR">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Post" storyboardName="Post" referencedIdentifier="PostViewController" id="3Ep-pZ-5xT" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mUE-gP-NSn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EzM-Cn-w4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="-79"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_post_cell" width="385" height="213"/>
@@ -130,8 +140,5 @@
         <namedColor name="textBlackColor">
             <color red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
