@@ -192,6 +192,32 @@ Meteor 거대 meteor
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmY-Of-uG0">
+                                <rect key="frame" x="59" y="832" width="12" height="19"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" name="baseColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xx-rw-iNg">
+                                <rect key="frame" x="97" y="817" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4wW-sR-lgQ"/>
+                                    <constraint firstAttribute="width" constant="30" id="t7v-iG-ewN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ic_comments">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="commentsButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S4h-Yy-uZi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78w-yS-MQ3">
+                                <rect key="frame" x="142" y="833" width="12" height="22"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                <color key="textColor" name="baseColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynZ-da-YLq">
                                 <rect key="frame" x="20" y="817" width="31" height="30"/>
                                 <constraints>
@@ -203,30 +229,10 @@ Meteor 거대 meteor
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                 </state>
                                 <state key="selected" image="ic_likes_active"/>
+                                <connections>
+                                    <action selector="likesButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vUi-9x-jUZ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xx-rw-iNg">
-                                <rect key="frame" x="97" y="817" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="4wW-sR-lgQ"/>
-                                    <constraint firstAttribute="width" constant="30" id="t7v-iG-ewN"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="ic_comments">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
-                                </buttonConfiguration>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78w-yS-MQ3">
-                                <rect key="frame" x="142" y="833" width="12" height="22"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                <color key="textColor" name="baseColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmY-Of-uG0">
-                                <rect key="frame" x="59" y="832" width="12" height="19"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
-                                <color key="textColor" name="baseColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -255,6 +261,14 @@ Meteor 거대 meteor
                     </view>
                     <connections>
                         <outlet property="backButton" destination="kLg-OP-5NC" id="Fjd-Ei-9P7"/>
+                        <outlet property="commentsButton" destination="3xx-rw-iNg" id="Xmu-Xp-5ZU"/>
+                        <outlet property="commentsNumLabel" destination="78w-yS-MQ3" id="ke0-ma-kWE"/>
+                        <outlet property="contentLabel" destination="CYl-bT-oic" id="Z1u-I8-ELi"/>
+                        <outlet property="imgView" destination="tag-Zj-uie" id="m4V-gO-TUb"/>
+                        <outlet property="likesButton" destination="ynZ-da-YLq" id="v3J-L8-uqf"/>
+                        <outlet property="likesNumLabel" destination="xmY-Of-uG0" id="Ne8-7J-oDu"/>
+                        <outlet property="nameLabel" destination="jS6-oM-VE1" id="Kow-1m-ZsJ"/>
+                        <outlet property="titleLabel" destination="1K7-xo-B2b" id="x7W-Pt-ZsG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
