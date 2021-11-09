@@ -63,29 +63,33 @@
                                 <rect key="frame" x="0.0" y="104" width="414" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CommentCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="76" id="2Cg-xC-I9P" customClass="CommentCell" customModule="Smilegate_Blog" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="76"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CommentCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="2Cg-xC-I9P" customClass="CommentCell" customModule="Smilegate_Blog" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Cg-xC-I9P" id="Jzv-6R-dBP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Heegee Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-mF-fQf">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heegee Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-mF-fQf">
                                                     <rect key="frame" x="20" y="10" width="92" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" priority="750" constant="21" id="vPm-it-a4w"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="너무 좋은 글이네요~~ ^^" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-fj-j7j">
-                                                    <rect key="frame" x="20" y="48" width="145.5" height="18"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="너무 좋은 글이네요~~ ^^" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1n-fj-j7j">
+                                                    <rect key="frame" x="20" y="41" width="145.5" height="19"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" priority="750" constant="19" id="F4a-mx-hQb"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <color key="textColor" name="textBlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7l-2o-AzZ">
-                                                    <rect key="frame" x="380" y="23" width="19" height="30"/>
+                                                    <rect key="frame" x="375" y="20" width="19" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="qqB-pm-Lki"/>
                                                         <constraint firstAttribute="width" constant="19" id="tqT-M4-FLV"/>
@@ -98,8 +102,13 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="O7l-2o-AzZ" secondAttribute="trailing" constant="15" id="HSB-yb-LLU"/>
+                                                <constraint firstItem="zK4-mF-fQf" firstAttribute="leading" secondItem="Jzv-6R-dBP" secondAttribute="leading" constant="20" id="CoG-Qb-dpJ"/>
+                                                <constraint firstItem="zK4-mF-fQf" firstAttribute="top" secondItem="Jzv-6R-dBP" secondAttribute="top" constant="10" id="F8W-5a-NSL"/>
+                                                <constraint firstAttribute="trailing" secondItem="O7l-2o-AzZ" secondAttribute="trailing" constant="20" id="HSB-yb-LLU"/>
+                                                <constraint firstItem="d1n-fj-j7j" firstAttribute="leading" secondItem="Jzv-6R-dBP" secondAttribute="leading" constant="20" id="Qq9-OE-Pca"/>
                                                 <constraint firstItem="O7l-2o-AzZ" firstAttribute="centerY" secondItem="Jzv-6R-dBP" secondAttribute="centerY" id="Vw4-u5-mCh"/>
+                                                <constraint firstAttribute="bottom" secondItem="d1n-fj-j7j" secondAttribute="bottom" constant="10" id="bNc-Cp-Wqh"/>
+                                                <constraint firstItem="d1n-fj-j7j" firstAttribute="top" secondItem="zK4-mF-fQf" secondAttribute="bottom" constant="10" id="ho7-WV-lkL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
