@@ -54,8 +54,8 @@ extension DatabaseManager {
 
 // MARK: - Comment Management
 extension DatabaseManager {
-    func fetchComment(postingId: Int, completion: @escaping ([Comment]) -> Void) {
-        database.child("posting").child(String(postingId)).child("comments").observeSingleEvent(of: .value) { snapshot in
+    func fetchComment(postingId: String, completion: @escaping ([Comment]) -> Void) {
+        database.child("posting").child(postingId).child("comments").observeSingleEvent(of: .value) { snapshot in
             do {
                 let data = try JSONSerialization.data(withJSONObject: snapshot.value, options: [])
                 let decoder = JSONDecoder()
