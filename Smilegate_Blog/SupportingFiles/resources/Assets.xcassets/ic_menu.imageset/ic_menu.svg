@@ -1,0 +1,10 @@
+<svg id="Icon_material-more-vert" data-name="Icon material-more-vert" xmlns="http://www.w3.org/2000/svg" width="10" height="40" viewBox="0 0 10 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00a388;
+      }
+    </style>
+  </defs>
+  <path id="Icon_material-more-vert-2" data-name="Icon material-more-vert" class="cls-1" d="M20,16a5,5,0,1,0-5-5A5.015,5.015,0,0,0,20,16Zm0,5a5,5,0,1,0,5,5A5.015,5.015,0,0,0,20,21Zm0,15a5,5,0,1,0,5,5A5.015,5.015,0,0,0,20,36Z" transform="translate(-15 -6)"/>
+</svg>
