@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var postTableView: UITableView!
+    @IBOutlet weak var emptyLabel: UILabel!
     let viewModel = HomeViewModel()
     
     // segue 수행되기 직전 준비하는 함수
@@ -31,11 +32,25 @@ class HomeViewController: UIViewController {
     
     func fetchPosts() {
         DatabaseManager.shared.fetchPosting { postings in
+            if postings == nil {
+                self.hideTableView()
+                return
+            }
+            self.showTableView()
             self.viewModel.postingList = postings
-            Posting.identifier = self.viewModel.numOfPostingList
             self.postTableView.refreshControl?.endRefreshing()
             self.postTableView.reloadData()
         }
+    }
+    
+    func hideTableView() {
+        postTableView.isHidden = true
+        emptyLabel.isHidden = false
+    }
+    
+    func showTableView() {
+        postTableView.isHidden = false
+        emptyLabel.isHidden = true
     }
 }
 

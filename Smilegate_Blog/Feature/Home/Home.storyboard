@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="게시물이 비었습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6e-xu-Woq">
+                                <rect key="frame" x="186" y="437" width="166" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" name="textBlackColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smilegate Blog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKo-8s-QrG">
                                 <rect key="frame" x="20" y="59" width="198.5" height="36"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
@@ -38,26 +44,26 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="171"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_smilegate" translatesAutoresizingMaskIntoConstraints="NO" id="hww-cs-kUU">
-                                                    <rect key="frame" x="10" y="30" width="100" height="111"/>
+                                                    <rect key="frame" x="25" y="30" width="100" height="111"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="HMr-qc-SVg"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 일기" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3W-yI-Lpa">
-                                                    <rect key="frame" x="120" y="30" width="244" height="26.5"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                                    <rect key="frame" x="135" y="30" width="209" height="24"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
                                                     <color key="textColor" name="textBlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user" translatesAutoresizingMaskIntoConstraints="NO" id="0uG-MB-Bqo">
-                                                    <rect key="frame" x="120" y="121" width="20" height="20"/>
+                                                    <rect key="frame" x="135" y="121" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="GRU-A0-FJv"/>
                                                         <constraint firstAttribute="width" secondItem="0uG-MB-Bqo" secondAttribute="height" multiplier="1:1" id="xyj-Ch-2Sb"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heegee Park" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HB-Bh-14Y">
-                                                    <rect key="frame" x="145" y="123" width="70.5" height="16"/>
+                                                    <rect key="frame" x="160" y="123" width="70.5" height="16"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <color key="textColor" name="textBlackColor"/>
                                                     <nil key="highlightedColor"/>
@@ -67,14 +73,14 @@
                                                 <constraint firstItem="j3W-yI-Lpa" firstAttribute="top" secondItem="hww-cs-kUU" secondAttribute="top" id="9DP-sG-sXC"/>
                                                 <constraint firstAttribute="bottom" secondItem="hww-cs-kUU" secondAttribute="bottom" constant="30" id="JMh-Ul-8gi"/>
                                                 <constraint firstItem="ppW-P1-cXv" firstAttribute="leading" secondItem="pnd-Wu-uWN" secondAttribute="leading" id="NT8-Vd-CfO"/>
-                                                <constraint firstAttribute="trailing" secondItem="j3W-yI-Lpa" secondAttribute="trailing" constant="10" id="PhA-ZM-Zvs"/>
+                                                <constraint firstAttribute="trailing" secondItem="j3W-yI-Lpa" secondAttribute="trailing" constant="30" id="PhA-ZM-Zvs"/>
                                                 <constraint firstItem="j3W-yI-Lpa" firstAttribute="leading" secondItem="hww-cs-kUU" secondAttribute="trailing" constant="10" id="QJm-SS-USU"/>
                                                 <constraint firstItem="1HB-Bh-14Y" firstAttribute="leading" secondItem="0uG-MB-Bqo" secondAttribute="trailing" constant="5" id="Wmq-3S-g15"/>
                                                 <constraint firstItem="0uG-MB-Bqo" firstAttribute="leading" secondItem="j3W-yI-Lpa" secondAttribute="leading" id="dbt-b5-190"/>
                                                 <constraint firstItem="1HB-Bh-14Y" firstAttribute="centerY" secondItem="0uG-MB-Bqo" secondAttribute="centerY" id="hpY-88-cbN"/>
                                                 <constraint firstItem="0uG-MB-Bqo" firstAttribute="bottom" secondItem="hww-cs-kUU" secondAttribute="bottom" id="kMg-ex-KVl"/>
                                                 <constraint firstItem="hww-cs-kUU" firstAttribute="top" secondItem="pnd-Wu-uWN" secondAttribute="top" constant="30" id="mWc-UJ-wgd"/>
-                                                <constraint firstItem="hww-cs-kUU" firstAttribute="leading" secondItem="pnd-Wu-uWN" secondAttribute="leading" constant="10" id="rB8-PY-hky"/>
+                                                <constraint firstItem="hww-cs-kUU" firstAttribute="leading" secondItem="pnd-Wu-uWN" secondAttribute="leading" constant="25" id="rB8-PY-hky"/>
                                                 <constraint firstAttribute="bottom" secondItem="ppW-P1-cXv" secondAttribute="bottom" id="v8L-FO-gYw"/>
                                                 <constraint firstItem="ppW-P1-cXv" firstAttribute="top" secondItem="pnd-Wu-uWN" secondAttribute="top" id="xUY-4u-plQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="ppW-P1-cXv" secondAttribute="trailing" id="xwf-yc-bkA"/>
@@ -97,17 +103,20 @@
                         <viewLayoutGuide key="safeArea" id="ekW-eR-0YA"/>
                         <color key="backgroundColor" name="mainBackgruondColor"/>
                         <constraints>
+                            <constraint firstItem="W6e-xu-Woq" firstAttribute="centerY" secondItem="ekW-eR-0YA" secondAttribute="centerY" id="0US-or-6M1"/>
                             <constraint firstItem="ajg-Y1-jxn" firstAttribute="centerX" secondItem="ekW-eR-0YA" secondAttribute="centerX" id="2xH-B2-U9E"/>
                             <constraint firstItem="ajg-Y1-jxn" firstAttribute="top" secondItem="bKo-8s-QrG" secondAttribute="bottom" constant="15" id="37R-ti-2zh"/>
                             <constraint firstItem="ekW-eR-0YA" firstAttribute="bottom" secondItem="ajg-Y1-jxn" secondAttribute="bottom" id="EO2-i9-R5l"/>
                             <constraint firstItem="ajg-Y1-jxn" firstAttribute="leading" secondItem="ekW-eR-0YA" secondAttribute="leading" constant="20" id="FJJ-0E-FRF"/>
                             <constraint firstItem="bKo-8s-QrG" firstAttribute="top" secondItem="ekW-eR-0YA" secondAttribute="top" constant="15" id="fE4-vy-dAI"/>
                             <constraint firstItem="bKo-8s-QrG" firstAttribute="leading" secondItem="ekW-eR-0YA" secondAttribute="leading" constant="20" id="lNP-sO-C0c"/>
+                            <constraint firstItem="W6e-xu-Woq" firstAttribute="centerX" secondItem="ekW-eR-0YA" secondAttribute="centerX" id="sa9-TT-47W"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="house.fill" catalog="system" id="Cvv-7H-fCc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="emptyLabel" destination="W6e-xu-Woq" id="UNI-eC-xX1"/>
                         <outlet property="postTableView" destination="ajg-Y1-jxn" id="XMA-jg-muU"/>
                     </connections>
                 </viewController>
