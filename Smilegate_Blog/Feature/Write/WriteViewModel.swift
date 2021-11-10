@@ -11,6 +11,7 @@ import UIKit
 class WriteViewModel {
     var posting: Posting?
     var editMode: EditMode = .create
+    var beReadyImageHandler: (() -> Void)?
     // 모델 불러오기
     func update(model: Posting?) {
         posting = model
@@ -20,7 +21,7 @@ class WriteViewModel {
         let user = User.shared
         let dbManager = DatabaseManager.shared
         dbManager.updatePosting(posting!)
-        Posting.identifier += 1
+//        Posting.identifier += 1
     }
     func updateImage(image: UIImage) {
         let manager = StorageManager.shared
@@ -29,6 +30,7 @@ class WriteViewModel {
             case .success(let downloadUrl):
                 self.posting!.imageURL = downloadUrl
                 self.updatePosting()
+                self.beReadyImageHandler?()
             case .failure(let error):
                 print("storage manager error: \(error)")
             }

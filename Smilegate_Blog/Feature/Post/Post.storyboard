@@ -210,7 +210,7 @@ Meteor 거대 meteor
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="commentsButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S4h-Yy-uZi"/>
-                                    <segue destination="mLn-ZE-iXi" kind="presentation" identifier="showComment" id="wcE-ED-fct"/>
+                                    <segue destination="mLn-ZE-iXi" kind="modal" identifier="showComment" id="jyN-7d-uwD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78w-yS-MQ3">

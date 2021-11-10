@@ -9,10 +9,13 @@ import Foundation
 
 class PostViewModel {
     let manager = DatabaseManager.shared
-    var posting: Posting?
+    var posting: Posting? {
+        didSet { if posting != nil { postHandler?() } }
+    }
     var editMode: EditMode = .modify
     var commentsList: [Comment] = []
     var commentsCount = 0
+    var postHandler: (() -> Void)?
     // 모델 불러오기
     func update(model: Posting?) {
         posting = model
@@ -36,10 +39,5 @@ class PostViewModel {
         let count = Int(posting!.likes)! - 1
         posting!.likes = String(count)
         manager.updatePosting(posting!)
-    }
-    
-    func hasComments() -> Bool {
-        let isExist = commentsList.first?.id != "" ? true: false
-        return isExist
     }
 }
