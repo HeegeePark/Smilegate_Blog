@@ -9,14 +9,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Comment View Controller-->
+        <!--CommentViewController-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CommentViewController" id="Y6W-OH-hqX" customClass="CommentViewController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentViewController" title="CommentViewController" id="Y6W-OH-hqX" customClass="CommentViewController" customModule="Smilegate_Blog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 작성된 댓글이 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4S-ex-DNr">
+                                <rect key="frame" x="93" y="441" width="228" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="7KV-vT-Sys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" name="textBlackColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iy-6I-urr" userLabel="Close Bar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <color key="backgroundColor" name="baseColor"/>
@@ -27,43 +36,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR6-Np-W8u" userLabel="Close">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wR6-Np-W8u" userLabel="Close">
                                 <rect key="frame" x="15" y="59" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="5WR-vf-A8T"/>
+                                    <constraint firstAttribute="height" constant="30" id="aDn-3G-w6w"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                     <color key="baseForegroundColor" red="0.9995927215" green="0.97318893669999995" blue="0.93332856890000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zLE-dX-of8"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="댓글" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwA-Cc-rdM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwA-Cc-rdM">
                                 <rect key="frame" x="60" y="62" width="35" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRs-sA-KpC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRs-sA-KpC">
                                 <rect key="frame" x="103" y="62" width="13" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdE-Xv-6fa" userLabel="Refresh">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdE-Xv-6fa" userLabel="Refresh">
                                 <rect key="frame" x="369" y="59" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="reloadButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="JzQ-Ru-9jp"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="brZ-69-PEM">
                                 <rect key="frame" x="0.0" y="104" width="414" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CommentCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="2Cg-xC-I9P" customClass="CommentCell" customModule="Smilegate_Blog" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="commentCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="70" id="2Cg-xC-I9P" customClass="CommentCell" customModule="Smilegate_Blog" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Cg-xC-I9P" id="Jzv-6R-dBP">
@@ -99,6 +114,9 @@
                                                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
                                                         <color key="baseForegroundColor" name="baseColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="deleteCommentButtonTapped:" destination="2Cg-xC-I9P" eventType="touchUpInside" id="NaY-HO-tK7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -111,30 +129,45 @@
                                                 <constraint firstItem="d1n-fj-j7j" firstAttribute="top" secondItem="zK4-mF-fQf" secondAttribute="bottom" constant="10" id="ho7-WV-lkL"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="d1n-fj-j7j" id="2Sa-DX-QKy"/>
+                                            <outlet property="nameLabel" destination="zK4-mF-fQf" id="b0D-1a-NYY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="yOT-qR-CF4"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="T9W-wK-nGw"/>
+                                </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztt-fn-aJI">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ztt-fn-aJI" userLabel="Input View">
                                 <rect key="frame" x="0.0" y="782" width="414" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3E-bv-O4C">
-                                        <rect key="frame" x="8" y="23" width="292" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3E-bv-O4C">
+                                        <rect key="frame" x="15" y="23" width="319" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="319" id="3hL-q3-AJb"/>
+                                        </constraints>
+                                        <color key="textColor" name="textBlackColor"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2X-CN-vSo">
-                                        <rect key="frame" x="340" y="25" width="50" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2X-CN-vSo">
+                                        <rect key="frame" x="349" y="24.5" width="50" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="등록">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" name="baseColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="l9m-Ky-ZJF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="hintGrayColor"/>
                                 <constraints>
+                                    <constraint firstItem="h2X-CN-vSo" firstAttribute="leading" secondItem="V3E-bv-O4C" secondAttribute="trailing" constant="15" id="Kmo-vs-10l"/>
                                     <constraint firstItem="h2X-CN-vSo" firstAttribute="centerY" secondItem="Ztt-fn-aJI" secondAttribute="centerY" id="Ta0-VX-vQS"/>
-                                    <constraint firstItem="h2X-CN-vSo" firstAttribute="leading" secondItem="V3E-bv-O4C" secondAttribute="trailing" constant="15" id="Uzn-L8-Kef"/>
                                     <constraint firstAttribute="trailing" secondItem="h2X-CN-vSo" secondAttribute="trailing" constant="15" id="lOZ-MS-Lxv"/>
                                     <constraint firstItem="V3E-bv-O4C" firstAttribute="centerY" secondItem="Ztt-fn-aJI" secondAttribute="centerY" id="urR-xy-JWo"/>
                                     <constraint firstAttribute="height" constant="80" id="yLc-Gh-o1V"/>
@@ -148,15 +181,33 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ztt-fn-aJI" secondAttribute="trailing" id="6eL-vL-7vf"/>
                             <constraint firstItem="3iy-6I-urr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7Ke-CP-7Gh"/>
                             <constraint firstItem="brZ-69-PEM" firstAttribute="top" secondItem="3iy-6I-urr" secondAttribute="bottom" id="7zj-6W-nKo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MdE-Xv-6fa" secondAttribute="trailing" constant="15" id="Fdi-nE-wrK"/>
+                            <constraint firstItem="x4S-ex-DNr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="MJc-H9-cn6"/>
+                            <constraint firstItem="wR6-Np-W8u" firstAttribute="centerY" secondItem="3iy-6I-urr" secondAttribute="centerY" id="PbE-Ld-xok"/>
                             <constraint firstItem="3iy-6I-urr" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" id="QXq-Wv-X3M"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ztt-fn-aJI" secondAttribute="bottom" id="VhQ-jc-AK2"/>
+                            <constraint firstItem="x4S-ex-DNr" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="bXN-nl-H4F"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="brZ-69-PEM" secondAttribute="trailing" id="d8Z-PR-weU"/>
                             <constraint firstItem="brZ-69-PEM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dnb-5n-o9a"/>
                             <constraint firstItem="3iy-6I-urr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fAM-n2-HHV"/>
+                            <constraint firstItem="MdE-Xv-6fa" firstAttribute="centerY" secondItem="3iy-6I-urr" secondAttribute="centerY" id="fn6-JJ-7jG"/>
+                            <constraint firstItem="mwA-Cc-rdM" firstAttribute="leading" secondItem="wR6-Np-W8u" secondAttribute="trailing" constant="15" id="j5W-j3-EKI"/>
+                            <constraint firstItem="bRs-sA-KpC" firstAttribute="leading" secondItem="mwA-Cc-rdM" secondAttribute="trailing" constant="8" id="jQO-mi-1KN"/>
                             <constraint firstItem="Ztt-fn-aJI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jr7-Pr-CaV"/>
+                            <constraint firstItem="bRs-sA-KpC" firstAttribute="centerY" secondItem="3iy-6I-urr" secondAttribute="centerY" id="p2O-U4-vA3"/>
                             <constraint firstItem="Ztt-fn-aJI" firstAttribute="top" secondItem="brZ-69-PEM" secondAttribute="bottom" id="pyv-3I-U2Y"/>
+                            <constraint firstItem="mwA-Cc-rdM" firstAttribute="centerY" secondItem="3iy-6I-urr" secondAttribute="centerY" id="tdD-53-W0v"/>
+                            <constraint firstItem="wR6-Np-W8u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="xqP-kD-YFn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addCommentButton" destination="h2X-CN-vSo" id="fjR-YO-UZI"/>
+                        <outlet property="commentNumLabel" destination="bRs-sA-KpC" id="4At-yy-w2H"/>
+                        <outlet property="emptyCommentLabel" destination="x4S-ex-DNr" id="RGi-5i-dLX"/>
+                        <outlet property="inputTextField" destination="V3E-bv-O4C" id="geA-Z2-vxK"/>
+                        <outlet property="inputViewBottom" destination="VhQ-jc-AK2" id="l01-pl-zxX"/>
+                        <outlet property="tableView" destination="brZ-69-PEM" id="fPd-jy-Pi5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
