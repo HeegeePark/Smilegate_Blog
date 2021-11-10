@@ -20,6 +20,10 @@ class CommentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        
+        // 키보드 상태 디텍션
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(adjustInputView), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @IBAction func closeButtonTapped(_ sender: Any) {
@@ -33,14 +37,17 @@ class CommentViewController: UIViewController {
     }
     @IBAction func addButtonTapped(_ sender: Any) {
         if tableView.isHidden == true { showTableView() }
-        let contents = inputTextField.text ?? ""
+        guard let contents = inputTextField.text, contents.isEmpty == false else { return }
         let timestamp: Double = Date().timeIntervalSince1970.rounded()
         let newComment = Comment(id: String(Comment.id), userName: user.name, content: contents, timestamp: timestamp)
         viewModel.updateComment(comment: newComment)
         Comment.id += 1
         fetchComments()
     }
-    
+    @IBAction func tapBG(_ sender: Any) {
+        // 화면 어디든 탭하면 키보드 사라지게 하기
+        inputTextField.resignFirstResponder()
+    }
     func updateUI() {
         if viewModel.isExist {
             showTableView()
@@ -49,7 +56,6 @@ class CommentViewController: UIViewController {
             hideTableView()
         }
     }
-    
     func fetchComments() {
         viewModel.manager.fetchComment(postingId: viewModel.postingId) { comments in
             self.viewModel.commentsList = comments
@@ -57,20 +63,35 @@ class CommentViewController: UIViewController {
                 self.viewModel.isExist = true
             }
             self.updateUI()
+            self.inputTextField.text = ""
         }
     }
-    
     func hideTableView() {
         tableView.isHidden = true
         emptyCommentLabel.isHidden = false
     }
-    
     func showTableView() {
         tableView.isHidden = false
         emptyCommentLabel.isHidden = true
     }
 }
 
+// MARK: - 키보드 높이에 따른 텍스트 입력창 위치 변경
+extension CommentViewController {
+    @objc private func adjustInputView(noti: Notification) {
+        guard let userInfo = noti.userInfo else { return }
+        guard let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        
+        if noti.name == UIResponder.keyboardWillShowNotification {
+            let adjustmentHeight = keyboardFrame.height - view.safeAreaInsets.bottom
+            inputViewBottom.constant = adjustmentHeight
+        } else {
+            inputViewBottom.constant = 0
+        }
+    }
+}
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
 extension CommentViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numOfCommentsList

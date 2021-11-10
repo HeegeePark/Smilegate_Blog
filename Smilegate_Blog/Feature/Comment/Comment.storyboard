@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 작성된 댓글이 없습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4S-ex-DNr">
-                                <rect key="frame" x="93" y="441" width="228" height="24"/>
+                                <rect key="frame" x="93" y="144" width="228" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="7KV-vT-Sys"/>
                                 </constraints>
@@ -177,16 +177,17 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ztt-fn-aJI" secondAttribute="trailing" id="6eL-vL-7vf"/>
                             <constraint firstItem="3iy-6I-urr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7Ke-CP-7Gh"/>
                             <constraint firstItem="brZ-69-PEM" firstAttribute="top" secondItem="3iy-6I-urr" secondAttribute="bottom" id="7zj-6W-nKo"/>
+                            <constraint firstItem="x4S-ex-DNr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="CTA-uD-dj6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MdE-Xv-6fa" secondAttribute="trailing" constant="15" id="Fdi-nE-wrK"/>
                             <constraint firstItem="x4S-ex-DNr" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="MJc-H9-cn6"/>
                             <constraint firstItem="wR6-Np-W8u" firstAttribute="centerY" secondItem="3iy-6I-urr" secondAttribute="centerY" id="PbE-Ld-xok"/>
                             <constraint firstItem="3iy-6I-urr" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" id="QXq-Wv-X3M"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ztt-fn-aJI" secondAttribute="bottom" id="VhQ-jc-AK2"/>
-                            <constraint firstItem="x4S-ex-DNr" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="bXN-nl-H4F"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="brZ-69-PEM" secondAttribute="trailing" id="d8Z-PR-weU"/>
                             <constraint firstItem="brZ-69-PEM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dnb-5n-o9a"/>
                             <constraint firstItem="3iy-6I-urr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="fAM-n2-HHV"/>
@@ -199,6 +200,9 @@
                             <constraint firstItem="mwA-Cc-rdM" firstAttribute="centerY" secondItem="3iy-6I-urr" secondAttribute="centerY" id="tdD-53-W0v"/>
                             <constraint firstItem="wR6-Np-W8u" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="xqP-kD-YFn"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3zC-rO-2Zs" appends="YES" id="aF8-Fg-bh2"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="addCommentButton" destination="h2X-CN-vSo" id="fjR-YO-UZI"/>
@@ -210,6 +214,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3zC-rO-2Zs">
+                    <connections>
+                        <action selector="tapBG:" destination="Y6W-OH-hqX" id="eV1-Tv-TEu"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="70.982142857142847"/>
         </scene>
