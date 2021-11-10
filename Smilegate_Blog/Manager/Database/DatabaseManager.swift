@@ -28,7 +28,10 @@ extension DatabaseManager {
             print("----> \(snapshot.value)")
             do {
                 // JSON Decoding
-                let data = try JSONSerialization.data(withJSONObject: snapshot.value, options: [])
+                guard let data = try? JSONSerialization.data(withJSONObject: snapshot.value, options: []), data != nil else {
+                    completion([])
+                    return
+                }
                 let decoder = JSONDecoder()
                 let postings: [Posting] = try decoder.decode([Posting].self, from: data)
                 completion(postings)
@@ -68,13 +71,19 @@ extension DatabaseManager {
         }
     }
     
-    func updateComment(postingId: Int, comment: Comment) {
-        let dbPath = "posting/\(String(postingId))/comments/\(String(comment.id))"
+    func updateComment(postingId: String, comment: Comment) {
+        let dbPath = "posting/\(postingId)/comments/\(comment.id)"
         database.child(dbPath).setValue(comment.toDictionary)
     }
     
-    func deleteComment(postingId: Int, id: Int) {
-        let dbPath = "posting/\(String(postingId))/comments/\(String(id))"
+    func deleteComment(postingId: String, id: String) {
+        let dbPath = "posting/\(postingId))/comments/\(id))"
         database.child(dbPath).removeValue()
+    }
+    
+    func updateComments(postingId: String, comments: [Comment]) {
+        let dbPath = "posting/\(postingId)/comments"
+        let dictArray = comments.map { $0.toDictionary }
+        database.child(dbPath).setValue(dictArray)
     }
 }

@@ -9,7 +9,13 @@ import Foundation
 
 class HomeViewModel {
     let manager = DatabaseManager.shared
-    var postingList: [Posting] = []
+    var postingList: [Posting] = [] {
+        didSet {
+            if !postingList.isEmpty {
+                Posting.identifier = Int(sortedList.first!.identifier)! + 1
+            }
+        }
+    }
     
     // timestamp 기준 내림차순 정렬
     var sortedList: [Posting] {

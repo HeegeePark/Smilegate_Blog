@@ -22,6 +22,20 @@ class PostViewController: UIViewController {
     @IBOutlet weak var commentsNumLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var postLine: UILabel!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // comments 넘기기
+        if segue.identifier == "showComments" {
+            let commentViewController = segue.destination as? CommentViewController
+            if viewModel.hasComments() {
+                commentViewController?.viewModel.update(model: viewModel.commentsList, id: viewModel.posting!.identifier)
+            } else {
+                // 테이블뷰가 없는 comment컨뷰 구성
+                commentViewController?.hideTableView()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()

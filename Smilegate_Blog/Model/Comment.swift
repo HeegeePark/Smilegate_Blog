@@ -9,11 +9,13 @@ import Foundation
 
 struct Comment: Codable {
     let id: String
+    var userName: String
     var content: String
     let timestamp: TimeInterval
     
     var toDictionary: [String: Any] {
         let dict: [String: Any] = ["id": id,
+                                   "userName": userName,
                                    "content": content,
                                    "timestamp": timestamp]
         return dict
@@ -21,6 +23,7 @@ struct Comment: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id
+        case userName
         case content
         case timestamp
     }

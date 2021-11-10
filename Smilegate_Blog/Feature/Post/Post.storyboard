@@ -87,7 +87,7 @@ Improve Your Health?</string>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CYl-bT-oic">
                                                 <rect key="frame" x="26" y="390.5" width="362" height="1197"/>
-                                                <mutableString key="text">Ha!
+                                                <string key="text">Ha!
 Ah- yeah uh, uh
 모두 그에게 말해 또 왔네 (새꺄 what?)
 죽지 않고 왔다 이렇게 (새꺄 뭐?)
@@ -145,7 +145,7 @@ Meteor 거대 meteor
 난 영원할 거라 믿어
 흥분으로 가득차
 이 도시에 나 외칠 꺼야
-"드디어 내가 여 왔다"</mutableString>
+"드디어 내가 여 왔다"</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -210,6 +210,7 @@ Meteor 거대 meteor
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="commentsButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S4h-Yy-uZi"/>
+                                    <segue destination="mLn-ZE-iXi" kind="presentation" identifier="showComment" id="wcE-ED-fct"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78w-yS-MQ3">
@@ -275,7 +276,15 @@ Meteor 거대 meteor
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="70.982142857142847"/>
+            <point key="canvasLocation" x="-254" y="-176"/>
+        </scene>
+        <!--CommentViewController-->
+        <scene sceneID="OHZ-tx-ebF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Comment" referencedIdentifier="CommentViewController" id="mLn-ZE-iXi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xGC-hd-xGN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="-176"/>
         </scene>
     </scenes>
     <resources>
