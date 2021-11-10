@@ -25,13 +25,10 @@ class PostViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // comments 넘기기
-        if segue.identifier == "showComments" {
+        if segue.identifier == "showComment" {
             let commentViewController = segue.destination as? CommentViewController
-            if viewModel.hasComments() {
-                commentViewController?.viewModel.update(model: viewModel.commentsList, id: viewModel.posting!.identifier)
-            } else {
-                // 테이블뷰가 없는 comment컨뷰 구성
-                commentViewController?.hideTableView()
+            if let postingId = sender as? String {
+                commentViewController?.viewModel.update(model: viewModel.commentsList, id: postingId)
             }
         }
     }
@@ -39,8 +36,8 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
-        fetchComments()
     }
+    
     @IBAction func backButtonTapped(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let mainTBC = sb.instantiate("MainTabBarController")
@@ -56,15 +53,12 @@ class PostViewController: UIViewController {
     }
     
     @IBAction func commentsButtonTapped(_ sender: Any) {
-        viewModel.manager.fetchComment(postingId: viewModel.posting!.identifier) { comments in
-            self.viewModel.commentsList = comments
-            self.viewModel.commentsCount = comments.count
-        }
-        commentsNumLabel.text = String(viewModel.commentsCount)
+        performSegue(withIdentifier: "showComment", sender: viewModel.posting?.identifier)
     }
     
     func initUI() {
         hideComponents()
+        loadPosting()
     }
     
     func updateUI() {
@@ -108,13 +102,13 @@ class PostViewController: UIViewController {
         postLine.isHidden = false
     }
     
-    func fetchComments() {
-        viewModel.manager.fetchComment(postingId: viewModel.posting!.identifier) { comments in
-            self.viewModel.commentsList = comments
-            if self.viewModel.hasComments() {
-                self.viewModel.commentsCount = comments.count
+    func loadPosting() {
+        viewModel.postHandler = {
+            self.viewModel.manager.fetchComment(postingId: self.viewModel.posting!.identifier) { comments in
+                self.viewModel.commentsList = comments
+                self.viewModel.commentsCount = comments.count - 1
+                self.updateUI()
             }
-            self.updateUI()
         }
     }
 }
