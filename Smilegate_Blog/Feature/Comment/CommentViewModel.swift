@@ -47,7 +47,6 @@ class CommentViewModel {
     }
     
     func deleteComment(comment: Comment) {
-        manager.deleteComment(postingId: postingId, id: comment.id)
         commentsList = commentsList.filter { presentComment in
             return presentComment.id != comment.id
         }
