@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1A7EBAEFCEC92CCE9FDFAE5E /* Pods_Smilegate_Blog_Smilegate_BlogUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E21C1715A6E8E3B53B3B975 /* Pods_Smilegate_Blog_Smilegate_BlogUITests.framework */; };
 		4F2404BE2737C07D008282F4 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404BD2737C07D008282F4 /* HomeCell.swift */; };
+		4F2404C1273A7D47008282F4 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404C0273A7D47008282F4 /* CommentViewController.swift */; };
+		4F2404C3273A7D62008282F4 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404C2273A7D62008282F4 /* CommentViewModel.swift */; };
+		4F2404C5273A7D71008282F4 /* Comment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2404C4273A7D71008282F4 /* Comment.storyboard */; };
+		4F2404C7273A7FB7008282F4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404C6273A7FB7008282F4 /* CommentCell.swift */; };
 		4F2F01AB27316C51002C6452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AA27316C51002C6452 /* AppDelegate.swift */; };
 		4F2F01AD27316C51002C6452 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AC27316C51002C6452 /* SceneDelegate.swift */; };
 		4F2F01B227316C51002C6452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F01B027316C51002C6452 /* Main.storyboard */; };
@@ -67,6 +71,10 @@
 		0E21C1715A6E8E3B53B3B975 /* Pods_Smilegate_Blog_Smilegate_BlogUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smilegate_Blog_Smilegate_BlogUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		154EFFF26747A7687DC1D201 /* Pods-Smilegate_BlogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smilegate_BlogTests.debug.xcconfig"; path = "Target Support Files/Pods-Smilegate_BlogTests/Pods-Smilegate_BlogTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4F2404BD2737C07D008282F4 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		4F2404C0273A7D47008282F4 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		4F2404C2273A7D62008282F4 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		4F2404C4273A7D71008282F4 /* Comment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comment.storyboard; sourceTree = "<group>"; };
+		4F2404C6273A7FB7008282F4 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		4F2F01A727316C51002C6452 /* Smilegate_Blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smilegate_Blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2F01AA27316C51002C6452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F2F01AC27316C51002C6452 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +158,17 @@
 				E43148A7B26FE2022AB02CB8 /* Pods_Smilegate_BlogTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F2404BF273A7D2D008282F4 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				4F2404C0273A7D47008282F4 /* CommentViewController.swift */,
+				4F2404C2273A7D62008282F4 /* CommentViewModel.swift */,
+				4F2404C4273A7D71008282F4 /* Comment.storyboard */,
+				4F2404C6273A7FB7008282F4 /* CommentCell.swift */,
+			);
+			path = Comment;
 			sourceTree = "<group>";
 		};
 		4F2F019E27316C51002C6452 = {
@@ -296,6 +315,7 @@
 		4FC8DC332732ABE2008E2449 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				4F2404BF273A7D2D008282F4 /* Comment */,
 				4FC8DC432732B7B5008E2449 /* Write */,
 				4FC8DC222732842A008E2449 /* Main */,
 				4FC8DC2E27329C6C008E2449 /* Home */,
@@ -463,6 +483,7 @@
 				4FC8DC472732BA81008E2449 /* Write.storyboard in Resources */,
 				4FC8DC3F2732AD9A008E2449 /* Mypage.storyboard in Resources */,
 				4FC8DC1E2732569F008E2449 /* .swiftlint.yml in Resources */,
+				4F2404C5273A7D71008282F4 /* Comment.storyboard in Resources */,
 				4F2F01B727316C53002C6452 /* LaunchScreen.storyboard in Resources */,
 				4FC8DC3227329CB1008E2449 /* Home.storyboard in Resources */,
 				4F2F01B427316C53002C6452 /* Assets.xcassets in Resources */,
@@ -612,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2404C3273A7D62008282F4 /* CommentViewModel.swift in Sources */,
 				4F59A4122734834100ECEB42 /* WriteViewModel.swift in Sources */,
 				4F2404BE2737C07D008282F4 /* HomeCell.swift in Sources */,
 				4FC8DC4D273389ED008E2449 /* UIStoryboard+.swift in Sources */,
@@ -622,6 +644,7 @@
 				4F59A4072733E8A500ECEB42 /* Comment.swift in Sources */,
 				4FC8DC2927328A80008E2449 /* UIFont+.swift in Sources */,
 				4F59A40C2733F2CE00ECEB42 /* StorageManager.swift in Sources */,
+				4F2404C1273A7D47008282F4 /* CommentViewController.swift in Sources */,
 				4F59A4052733E79F00ECEB42 /* Posting.swift in Sources */,
 				4FC8DC372732AC7C008E2449 /* PostViewController.swift in Sources */,
 				4FC8DC2D27328CC2008E2449 /* MainTabBarController.swift in Sources */,
@@ -633,6 +656,7 @@
 				4FC8DC3027329C8A008E2449 /* HomeViewController.swift in Sources */,
 				4FC8DC3B2732ACA1008E2449 /* MypageViewController.swift in Sources */,
 				4F59A41427349E4A00ECEB42 /* PostViewModel.swift in Sources */,
+				4F2404C7273A7FB7008282F4 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
