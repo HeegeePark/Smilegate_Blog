@@ -164,9 +164,24 @@ extension PostViewController {
     }
     
     func deletePost() {
-        // "삭제된 글은 복구가 불가능합니다. 글을 삭제하시겠습니까?", [취소, 확인] 누르는 UIAlert 실행
-        // post 삭제
-        // 이전 뷰(홈뷰 또는 마이페이지 뷰) 돌아가기
-        return
+        let alert = UIAlertController(title: nil, message: "삭제된 글은 복구가 불가능합니다. 글을 삭제하시겠습니까?", preferredStyle: .alert)
+        let delete = UIAlertAction(title: "확인", style: .destructive) { [unowned self] _ in
+            self.viewModel.deletePosting()
+            
+            guard let presentVC = self.presentingViewController else { return }
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let mainTBC = storyBoard.instantiateViewController(withIdentifier: "MainTabBarController") as! MainTabBarController
+            
+            mainTBC.modalPresentationStyle = .fullScreen
+            self.dismiss(animated: false) {
+                presentVC.present(mainTBC, animated: true, completion: nil)
+            }
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(delete)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true)
     }
 }

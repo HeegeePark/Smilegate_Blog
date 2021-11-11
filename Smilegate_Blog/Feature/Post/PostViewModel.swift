@@ -24,6 +24,11 @@ class PostViewModel {
         from = prev
     }
     
+    // 게시 글 삭제
+    func deletePosting() {
+        manager.deletePosting(identifier: posting!.identifier)
+    }
+    
     func updateLikes(_ didLikes: Bool) {
         if didLikes {
             addLikes()
