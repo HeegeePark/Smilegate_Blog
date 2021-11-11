@@ -36,7 +36,7 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
                     viewModel.updatePosting()
                     let postVC = segue.destination as? PostViewController
                     let posting = self.viewModel.posting
-                    postVC?.viewModel.update(model: posting)
+                    postVC?.viewModel.update(model: posting, prev: .edit)
                     return
                 }
             case .modify:
@@ -47,7 +47,7 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
             viewModel.beReadyImageHandler = {
                 let postVC = segue.destination as? PostViewController
                 let posting = self.viewModel.posting
-                postVC?.viewModel.update(model: posting)
+                postVC?.viewModel.update(model: posting, prev: .edit)
             }
         }
     }

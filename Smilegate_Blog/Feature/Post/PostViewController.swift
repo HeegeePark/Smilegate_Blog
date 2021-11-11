@@ -27,8 +27,8 @@ class PostViewController: UIViewController {
         // comments 넘기기
         if segue.identifier == "showComment" {
             let commentViewController = segue.destination as? CommentViewController
-            if let postingId = sender as? String {
-                commentViewController?.viewModel.update(model: viewModel.commentsList, id: postingId)
+            if let postingInfo = sender as? Posting {
+                commentViewController?.viewModel.update(model: viewModel.commentsList, posting: postingInfo)
             }
         }
     }
@@ -53,7 +53,7 @@ class PostViewController: UIViewController {
     }
     
     @IBAction func commentsButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "showComment", sender: viewModel.posting?.identifier)
+        performSegue(withIdentifier: "showComment", sender: viewModel.posting!)
     }
     
     func initUI() {
@@ -103,7 +103,16 @@ class PostViewController: UIViewController {
     }
     
     func loadPosting() {
-        viewModel.postHandler = {
+        switch viewModel.from {
+        case .edit:
+                viewModel.postHandler = {
+                    self.viewModel.manager.fetchComment(postingId: self.viewModel.posting!.identifier) { comments in
+                        self.viewModel.commentsList = comments
+                        self.viewModel.commentsCount = comments.count - 1
+                        self.updateUI()
+                    }
+                }
+        case .home:
             self.viewModel.manager.fetchComment(postingId: self.viewModel.posting!.identifier) { comments in
                 self.viewModel.commentsList = comments
                 self.viewModel.commentsCount = comments.count - 1

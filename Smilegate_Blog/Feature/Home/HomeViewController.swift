@@ -19,7 +19,7 @@ class HomeViewController: UIViewController {
             let postViewController = segue.destination as? PostViewController
             if let index = sender as? Int {
                 let postingInfo = viewModel.posting(at: index)
-                postViewController?.viewModel.update(model: postingInfo)
+                postViewController?.viewModel.update(model: postingInfo, prev: .home)
             }
         }
     }
