@@ -10,15 +10,18 @@ import Foundation
 class PostViewModel {
     let manager = DatabaseManager.shared
     var posting: Posting? {
-        didSet { if posting != nil { postHandler?() } }
+        didSet { if posting != nil && from == .edit { postHandler?() }}
     }
     var editMode: EditMode = .modify
     var commentsList: [Comment] = []
     var commentsCount = 0
     var postHandler: (() -> Void)?
+    var from: PreviousVC = .edit
+    
     // 모델 불러오기
-    func update(model: Posting?) {
+    func update(model: Posting?, prev: PreviousVC) {
         posting = model
+        from = prev
     }
     
     func updateLikes(_ didLikes: Bool) {
@@ -40,4 +43,9 @@ class PostViewModel {
         posting!.likes = String(count)
         manager.updatePosting(posting!)
     }
+}
+
+public enum PreviousVC {
+    case home
+    case edit
 }
