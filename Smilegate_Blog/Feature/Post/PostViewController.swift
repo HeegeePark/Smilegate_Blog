@@ -10,8 +10,10 @@ import UIKit
 class PostViewController: UIViewController {
     let viewModel = PostViewModel()
     let manager = StorageManager.shared
+    let user = User.shared
     
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var manageButton: UIButton!
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -57,6 +59,7 @@ class PostViewController: UIViewController {
     }
     
     func initUI() {
+        if user.name != viewModel.posting?.userName { hideManageButton() }
         hideComponents()
         loadPosting()
     }
@@ -102,6 +105,10 @@ class PostViewController: UIViewController {
         postLine.isHidden = false
     }
     
+    func hideManageButton() {
+        manageButton.isHidden = true
+    }
+    
     func loadPosting() {
         switch viewModel.from {
         case .edit:
@@ -119,5 +126,47 @@ class PostViewController: UIViewController {
                 self.updateUI()
             }
         }
+    }
+}
+
+// MARK: - manage Post Actions
+extension PostViewController {
+    @IBAction func manageButtonTapped(_ sender: Any) {
+        let managePostPicker = UIAlertController()
+        let editPost = UIAlertAction(title: "글 수정하기", style: .default) { [unowned self] _ in
+            self.editPost()
+        }
+        let deletePost = UIAlertAction(title: "글 삭제하기", style: .default) { [unowned self] _ in
+            self.deletePost()
+        }
+        
+        managePostPicker.addAction(editPost)
+        managePostPicker.addAction(deletePost)
+        managePostPicker.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
+        
+        present(managePostPicker, animated: true)
+    }
+    
+    func editPost() {
+        // write컨뷰로 postingInfo 넘겨서 띄우기
+        guard let presentVC = self.presentingViewController else { return }
+        let storyBoard = UIStoryboard(name: "Write", bundle: nil)
+        let writeVC = storyBoard.instantiateViewController(withIdentifier: "WriteViewController") as! WriteViewController
+        guard let editVC = writeVC.viewControllers.first as? EditViewController else { return }
+        
+        editVC.viewModel.update(model: viewModel.posting)
+        editVC.viewModel.editMode = .modify
+        writeVC.modalPresentationStyle = .fullScreen
+        
+        self.dismiss(animated: false) {
+            presentVC.present(writeVC, animated: true, completion: nil)
+        }
+    }
+    
+    func deletePost() {
+        // "삭제된 글은 복구가 불가능합니다. 글을 삭제하시겠습니까?", [취소, 확인] 누르는 UIAlert 실행
+        // post 삭제
+        // 이전 뷰(홈뷰 또는 마이페이지 뷰) 돌아가기
+        return
     }
 }

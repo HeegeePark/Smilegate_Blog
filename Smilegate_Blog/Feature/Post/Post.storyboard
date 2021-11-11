@@ -32,6 +32,20 @@
                                     <action selector="backButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ghr-E4-dVL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6Y-R6-fXk" userLabel="Manage Button">
+                                <rect key="frame" x="389" y="59.5" width="10" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="GCa-39-9Vt"/>
+                                    <constraint firstAttribute="height" constant="30" id="Q0W-cu-sdW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ic_menu">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="manageButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pwP-Cq-yen"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcJ-Xp-Ad2" userLabel="line1">
                                 <rect key="frame" x="0.0" y="105" width="414" height="1"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -238,6 +252,7 @@ Meteor 거대 meteor
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="t6Y-R6-fXk" firstAttribute="centerY" secondItem="kLg-OP-5NC" secondAttribute="centerY" id="0jr-oT-XEl"/>
                             <constraint firstItem="X78-rq-8Yx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="1dZ-uo-eg2"/>
                             <constraint firstItem="xmY-Of-uG0" firstAttribute="leading" secondItem="ynZ-da-YLq" secondAttribute="trailing" constant="7" id="2WM-Om-dff"/>
                             <constraint firstItem="G7v-MH-j8I" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="4Ax-Qp-T9r"/>
@@ -247,6 +262,7 @@ Meteor 거대 meteor
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="X78-rq-8Yx" secondAttribute="trailing" id="RVQ-dE-3Vr"/>
                             <constraint firstItem="xmY-Of-uG0" firstAttribute="bottom" secondItem="ynZ-da-YLq" secondAttribute="bottom" id="Ybe-qN-nE6"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FcJ-Xp-Ad2" secondAttribute="trailing" id="ZQS-6P-o38"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="t6Y-R6-fXk" secondAttribute="trailing" constant="15" id="ZlD-Wh-yg5"/>
                             <constraint firstItem="kLg-OP-5NC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="bQq-WW-8HY"/>
                             <constraint firstItem="FcJ-Xp-Ad2" firstAttribute="top" secondItem="kLg-OP-5NC" secondAttribute="bottom" constant="15" id="c21-R6-ybn"/>
                             <constraint firstItem="FcJ-Xp-Ad2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jvb-ci-XMa"/>
@@ -268,6 +284,7 @@ Meteor 거대 meteor
                         <outlet property="imgView" destination="tag-Zj-uie" id="m4V-gO-TUb"/>
                         <outlet property="likesButton" destination="ynZ-da-YLq" id="v3J-L8-uqf"/>
                         <outlet property="likesNumLabel" destination="xmY-Of-uG0" id="Ne8-7J-oDu"/>
+                        <outlet property="manageButton" destination="t6Y-R6-fXk" id="a7D-sa-dDa"/>
                         <outlet property="nameLabel" destination="jS6-oM-VE1" id="Kow-1m-ZsJ"/>
                         <outlet property="postLine" destination="OrW-4d-yop" id="7oM-yI-M45"/>
                         <outlet property="titleLabel" destination="1K7-xo-B2b" id="x7W-Pt-ZsG"/>
@@ -292,6 +309,7 @@ Meteor 거대 meteor
         <image name="ic_comments" width="32" height="32"/>
         <image name="ic_likes" width="33" height="30.791999816894531"/>
         <image name="ic_likes_active" width="33" height="30.791999816894531"/>
+        <image name="ic_menu" width="7.5" height="30"/>
         <image name="ic_user" width="45" height="45"/>
         <image name="img_default" width="978" height="468"/>
         <namedColor name="baseColor">
