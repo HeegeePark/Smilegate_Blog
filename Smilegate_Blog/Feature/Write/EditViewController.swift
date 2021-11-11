@@ -42,7 +42,15 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
             case .modify:
                 viewModel.posting?.title = titleField.text ?? ""
                 viewModel.posting?.contents = contentsField.text ?? ""
-                viewModel.updatePosting()
+                if self.image != nil {
+                    viewModel.updateImage(image: self.image!)
+                } else {
+                    viewModel.updatePosting()
+                    let postVC = segue.destination as? PostViewController
+                    let posting = self.viewModel.posting
+                    postVC?.viewModel.update(model: posting, prev: .edit)
+                    return
+                }
             }
             viewModel.beReadyImageHandler = {
                 let postVC = segue.destination as? PostViewController
@@ -69,6 +77,10 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
             contentsField.clearsOnBeginEditing = true
         case .modify:
             if let postingInfo = viewModel.posting {
+                titleField.clearsOnBeginEditing = false
+                contentsField.clearsOnBeginEditing = false
+                self.titleField.textColor = .textBlackColor
+                self.contentsField.textColor = .textBlackColor
                 titleField.text = postingInfo.title
                 contentsField.text = postingInfo.contents
             }
