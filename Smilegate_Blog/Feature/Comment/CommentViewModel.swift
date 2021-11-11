@@ -14,6 +14,7 @@ class CommentViewModel {
             if commentsList.count == 1 { isExist = false }
         }
     }
+    var postingInfo: Posting?
     var postingId = ""
     var isExist: Bool = false
     
@@ -30,10 +31,11 @@ class CommentViewModel {
         return sortedList.count
     }
     
-    func update(model: [Comment], id: String) {
+    func update(model: [Comment], posting: Posting) {
         isExist = model.count != 1 ? true: false
         commentsList = model
-        postingId = id
+        postingInfo = posting
+        postingId = posting.identifier
         if isExist { Comment.id = Int(commentsList.last!.id)! + 1 }
     }
     

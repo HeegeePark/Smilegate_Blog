@@ -28,8 +28,12 @@ class CommentViewController: UIViewController {
     
     @IBAction func closeButtonTapped(_ sender: Any) {
         guard let presentVC = self.presentingViewController else { return }
+        let storyBoard = UIStoryboard(name: "Post", bundle: nil)
+        let postVC = storyBoard.instantiateViewController(withIdentifier: "PostViewController") as! PostViewController
+        postVC.viewModel.update(model: self.viewModel.postingInfo!, prev: .home)
+        postVC.modalPresentationStyle = .fullScreen
         self.dismiss(animated: true) {
-            presentVC.present(PostViewController(), animated: true, completion: nil)
+            presentVC.present(postVC, animated: false, completion: nil)
         }
     }
     @IBAction func reloadButtonTapped(_ sender: Any) {
