@@ -34,4 +34,18 @@ Swift로 구현하는 iOS 블로그 앱
 - [ ] RSS
 
 ## UI 구성
-<img src="https://user-images.githubusercontent.com/47033052/140451811-3353af37-4682-487f-b360-432de3502068.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140453156-ae4db57d-dabf-445c-80c4-c7ff1f35fac9.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140451585-2c92c703-13d8-41e2-aa50-bfd4831ce550.png" width="20%"/> <img src="https://user-images.githubusercontent.com/47033052/140471998-e67347dd-fbe7-4293-ae8d-fd418bc732d2.png" width="20%"/>
+
+### 메인 페이지
+<img src="https://user-images.githubusercontent.com/47033052/141413253-9927eb3b-a19f-4dd3-9b40-6d5732686416.gif" width="20%"/> 
+
+### 글 조회
+<img src="https://user-images.githubusercontent.com/47033052/141413524-9c6269f1-8bbf-4fd9-874b-49d3d68fe545.gif" width="20%"/> 
+
+### 글 쓰기
+<img src="https://user-images.githubusercontent.com/47033052/141413534-62432fa5-b91a-4c63-84c7-3e24f6932389.gif" width="20%"/>
+
+### 글 수정
+<img src="https://user-images.githubusercontent.com/47033052/141413543-3aecf5e0-f09f-4061-8182-aef0061f424d.gif" width="20%"/> 
+
+### 글 삭제 
+<img src="https://user-images.githubusercontent.com/47033052/141413548-a28993b8-af28-4c89-85ae-40ec727947ac.gif" width="20%"/>
