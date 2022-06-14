@@ -11,6 +11,9 @@ Swift로 구현하는 iOS 블로그 앱
 - SwiftLint
 - Firebase
 
+## 개발 규칙
+### 📄 [WIKI](https://github.com/HeegeePark/Smilegate_Blog/wiki/%EA%B0%9C%EB%B0%9C-%EC%8B%9C-%EA%B7%9C%EC%B9%99!)
+
 ## 요구사항
 ###  필수 요구사항
 - [x] 메인 페이지
