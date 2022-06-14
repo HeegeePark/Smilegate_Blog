@@ -8,7 +8,6 @@
 import Foundation
 
 class HomeViewModel {
-    let manager = DatabaseManager.shared
     var postingList: [Posting] = [] {
         didSet {
             if !postingList.isEmpty {

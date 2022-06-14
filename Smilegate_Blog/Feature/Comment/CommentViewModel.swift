@@ -36,7 +36,7 @@ class CommentViewModel {
         commentsList = model
         postingInfo = posting
         postingId = posting.identifier
-        if isExist { Comment.id = Int(commentsList.last!.id)! + 1 }
+        Comment.id = Int(commentsList.last!.id)! + 1
     }
     
     func comment(at index: Int) -> Comment {

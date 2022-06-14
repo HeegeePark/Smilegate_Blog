@@ -63,11 +63,12 @@ class CommentViewController: UIViewController {
     func fetchComments() {
         viewModel.manager.fetchComment(postingId: viewModel.postingId) { comments in
             self.viewModel.commentsList = comments
-            if !self.viewModel.isExist {
+            if !self.viewModel.isExist && comments.count > 1 {
                 self.viewModel.isExist = true
             }
             self.updateUI()
             self.inputTextField.text = ""
+            self.commentNumLabel.text = String(self.viewModel.numOfCommentsList)
         }
     }
     func hideTableView() {

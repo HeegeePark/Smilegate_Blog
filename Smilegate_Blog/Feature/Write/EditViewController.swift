@@ -126,8 +126,16 @@ extension EditViewController: UIImagePickerControllerDelegate {
         picker.dismiss(animated: true)
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             let newImage = image
-            self.cameraButton.setImage(newImage, for: .normal)
+//            self.cameraButton.setImage(newImage, for: .normal)
+//            resizeCameraButton()
             self.image = newImage
         }
+    }
+    
+    func resizeCameraButton() {
+        self.cameraButton.translatesAutoresizingMaskIntoConstraints = false
+        self.cameraButton.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        self.cameraButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        self.cameraButton.centerYAnchor.constraint(equalTo: self.titleField.centerYAnchor).isActive = true
     }
 }
