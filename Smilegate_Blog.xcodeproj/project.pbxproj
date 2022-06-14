@@ -13,6 +13,11 @@
 		4F2404C3273A7D62008282F4 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404C2273A7D62008282F4 /* CommentViewModel.swift */; };
 		4F2404C5273A7D71008282F4 /* Comment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2404C4273A7D71008282F4 /* Comment.storyboard */; };
 		4F2404C7273A7FB7008282F4 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404C6273A7FB7008282F4 /* CommentCell.swift */; };
+		4F2404C9273CFDFA008282F4 /* MypageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404C8273CFDFA008282F4 /* MypageViewModel.swift */; };
+		4F2404CB273D05AC008282F4 /* MypageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404CA273D05AC008282F4 /* MypageHeaderView.swift */; };
+		4F2404CD273D2517008282F4 /* MypageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404CC273D2517008282F4 /* MypageCell.swift */; };
+		4F2404D1273DFB6D008282F4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404D0273DFB6D008282F4 /* UserViewModel.swift */; };
+		4F2404D3273E0844008282F4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2404D2273E0844008282F4 /* SettingViewController.swift */; };
 		4F2F01AB27316C51002C6452 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AA27316C51002C6452 /* AppDelegate.swift */; };
 		4F2F01AD27316C51002C6452 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F01AC27316C51002C6452 /* SceneDelegate.swift */; };
 		4F2F01B227316C51002C6452 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2F01B027316C51002C6452 /* Main.storyboard */; };
@@ -75,6 +80,11 @@
 		4F2404C2273A7D62008282F4 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		4F2404C4273A7D71008282F4 /* Comment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comment.storyboard; sourceTree = "<group>"; };
 		4F2404C6273A7FB7008282F4 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		4F2404C8273CFDFA008282F4 /* MypageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewModel.swift; sourceTree = "<group>"; };
+		4F2404CA273D05AC008282F4 /* MypageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageHeaderView.swift; sourceTree = "<group>"; };
+		4F2404CC273D2517008282F4 /* MypageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCell.swift; sourceTree = "<group>"; };
+		4F2404D0273DFB6D008282F4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		4F2404D2273E0844008282F4 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		4F2F01A727316C51002C6452 /* Smilegate_Blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smilegate_Blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F2F01AA27316C51002C6452 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F2F01AC27316C51002C6452 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -340,6 +350,11 @@
 			children = (
 				4FC8DC3A2732ACA1008E2449 /* MypageViewController.swift */,
 				4FC8DC3E2732AD9A008E2449 /* Mypage.storyboard */,
+				4F2404C8273CFDFA008282F4 /* MypageViewModel.swift */,
+				4F2404CA273D05AC008282F4 /* MypageHeaderView.swift */,
+				4F2404CC273D2517008282F4 /* MypageCell.swift */,
+				4F2404D0273DFB6D008282F4 /* UserViewModel.swift */,
+				4F2404D2273E0844008282F4 /* SettingViewController.swift */,
 			);
 			path = Mypage;
 			sourceTree = "<group>";
@@ -633,25 +648,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2404D3273E0844008282F4 /* SettingViewController.swift in Sources */,
 				4F2404C3273A7D62008282F4 /* CommentViewModel.swift in Sources */,
 				4F59A4122734834100ECEB42 /* WriteViewModel.swift in Sources */,
 				4F2404BE2737C07D008282F4 /* HomeCell.swift in Sources */,
 				4FC8DC4D273389ED008E2449 /* UIStoryboard+.swift in Sources */,
 				4FC8DC452732B7D9008E2449 /* WriteViewController.swift in Sources */,
+				4F2404D1273DFB6D008282F4 /* UserViewModel.swift in Sources */,
 				4FA559A32734CA1600193FDB /* HomeViewModel.swift in Sources */,
 				4F59A40A2733F0E700ECEB42 /* DatabaseManager.swift in Sources */,
 				4FC8DC272732893D008E2449 /* UIColor+.swift in Sources */,
 				4F59A4072733E8A500ECEB42 /* Comment.swift in Sources */,
+				4F2404C9273CFDFA008282F4 /* MypageViewModel.swift in Sources */,
 				4FC8DC2927328A80008E2449 /* UIFont+.swift in Sources */,
 				4F59A40C2733F2CE00ECEB42 /* StorageManager.swift in Sources */,
 				4F2404C1273A7D47008282F4 /* CommentViewController.swift in Sources */,
 				4F59A4052733E79F00ECEB42 /* Posting.swift in Sources */,
 				4FC8DC372732AC7C008E2449 /* PostViewController.swift in Sources */,
+				4F2404CD273D2517008282F4 /* MypageCell.swift in Sources */,
 				4FC8DC2D27328CC2008E2449 /* MainTabBarController.swift in Sources */,
 				4F2F01AB27316C51002C6452 /* AppDelegate.swift in Sources */,
 				4F59A4102734263200ECEB42 /* StorageError.swift in Sources */,
 				4FC8DC512733AD5E008E2449 /* EditViewController.swift in Sources */,
 				4F59A4032733E6F500ECEB42 /* User.swift in Sources */,
+				4F2404CB273D05AC008282F4 /* MypageHeaderView.swift in Sources */,
 				4F2F01AD27316C51002C6452 /* SceneDelegate.swift in Sources */,
 				4FC8DC3027329C8A008E2449 /* HomeViewController.swift in Sources */,
 				4FC8DC3B2732ACA1008E2449 /* MypageViewController.swift in Sources */,
