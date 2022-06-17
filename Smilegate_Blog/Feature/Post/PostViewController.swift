@@ -120,11 +120,12 @@ class PostViewController: UIViewController {
                     }
                 }
         case .home:
-            self.viewModel.manager.fetchComment(postingId: self.viewModel.posting!.identifier) { comments in
-                self.viewModel.commentsList = comments
-                self.viewModel.commentsCount = comments.count - 1
-                self.updateUI()
-            }
+            self.updateUI()
+//            self.viewModel.manager.fetchComment(postingId: self.viewModel.posting!.identifier) { comments in
+//                self.viewModel.commentsList = comments
+//                self.viewModel.commentsCount = comments.count - 1
+//                self.updateUI()
+//            }
         }
     }
 }
