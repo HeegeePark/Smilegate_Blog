@@ -62,7 +62,12 @@ extension DatabaseManager {
     func fetchComment(postingId: String, completion: @escaping ([Comment]) -> Void) {
         database.child("comments").child(postingId).observeSingleEvent(of: .value) { snapshot in
             do {
-                let data = try JSONSerialization.data(withJSONObject: snapshot.value, options: [])
+                // JSON Decoding
+                guard let commentDict = snapshot.value as? [String: Any] else { return }
+                guard let data = try? JSONSerialization.data(withJSONObject: Array(commentDict.values), options: []), data != nil else {
+                    completion([])
+                    return
+                }
                 let decoder = JSONDecoder()
                 let comments: [Comment] = try decoder.decode([Comment].self, from: data)
                 completion(comments)
@@ -75,7 +80,6 @@ extension DatabaseManager {
     
     func updateComment(postingId: String, comment: Comment) {
         let curRef = database.child("comments").child(postingId).childByAutoId()
-//        let dbPath = "posting/\(postingId)/comments/\(comment.id)"
         curRef.setValue(comment.toDictionary)
     }
     
