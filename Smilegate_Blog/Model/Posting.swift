@@ -15,18 +15,15 @@ struct Posting: Codable {
     var contents: String
     let timestamp: TimeInterval
     var imageURL: String = ""
-    var comments: [Comment]
     var likes: String
     
     var toDictionary: [String: Any] {
-        let commentsArray = comments.map { $0.toDictionary }
         let dict: [String: Any] = ["identifier": identifier,
                                    "userName": userName,
                                    "title": title,
                                    "contents": contents,
                                    "timestamp": timestamp,
                                    "imageURL": imageURL,
-                                   "comments": commentsArray,
                                    "likes": likes]
         return dict
     }
@@ -38,7 +35,6 @@ struct Posting: Codable {
         case contents
         case timestamp
         case imageURL
-        case comments
         case likes
     }
     static var identifier: Int = 0
