@@ -32,11 +32,11 @@ class CommentViewModel {
     }
     
     func update(model: [Comment], posting: Posting) {
-        isExist = model.count != 1 ? true: false
-        commentsList = model
+        if !model.isEmpty {
+            commentsList = model
+        }
         postingInfo = posting
         postingId = posting.identifier
-        Comment.id = Int(commentsList.last!.id)! + 1
     }
     
     func comment(at index: Int) -> Comment {
