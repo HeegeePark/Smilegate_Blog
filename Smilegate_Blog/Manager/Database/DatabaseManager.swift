@@ -28,7 +28,8 @@ extension DatabaseManager {
             print("----> \(snapshot.value)")
             do {
                 // JSON Decoding
-                guard let data = try? JSONSerialization.data(withJSONObject: snapshot.value, options: []), data != nil else {
+                guard let postDict = snapshot.value as? [String: Any] else { return }
+                guard let data = try? JSONSerialization.data(withJSONObject: Array(postDict.values), options: []), data != nil else {
                     completion([])
                     return
                 }
@@ -44,7 +45,8 @@ extension DatabaseManager {
     
     public func updatePosting(_ posting: Posting) {
         // posting db에 업뎃
-        database.child("posting").child(posting.identifier).setValue(posting.toDictionary)
+        let curRef = database.child("posting").childByAutoId()
+        curRef.setValue(posting.toDictionary)
     }
     
     /// delete posting
@@ -58,7 +60,7 @@ extension DatabaseManager {
 // MARK: - Comment Management
 extension DatabaseManager {
     func fetchComment(postingId: String, completion: @escaping ([Comment]) -> Void) {
-        database.child("posting").child(postingId).child("comments").observeSingleEvent(of: .value) { snapshot in
+        database.child("comments").child(postingId).observeSingleEvent(of: .value) { snapshot in
             do {
                 let data = try JSONSerialization.data(withJSONObject: snapshot.value, options: [])
                 let decoder = JSONDecoder()
@@ -72,8 +74,9 @@ extension DatabaseManager {
     }
     
     func updateComment(postingId: String, comment: Comment) {
-        let dbPath = "posting/\(postingId)/comments/\(comment.id)"
-        database.child(dbPath).setValue(comment.toDictionary)
+        let curRef = database.child("comments").child(postingId).childByAutoId()
+//        let dbPath = "posting/\(postingId)/comments/\(comment.id)"
+        curRef.setValue(comment.toDictionary)
     }
     
     func deleteComment(postingId: String, id: String) {

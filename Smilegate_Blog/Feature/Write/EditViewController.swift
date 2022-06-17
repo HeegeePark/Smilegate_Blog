@@ -28,7 +28,7 @@ class EditViewController: UIViewController, UINavigationControllerDelegate {
                 let contents = contentsField.text ?? ""
                 let timestamp: Double = Date().timeIntervalSince1970.rounded()
                 let emptyComment = Comment(id: "", userName: user.name, content: "", timestamp: 0)
-                let newPosting = Posting(identifier: String(Posting.identifier), userName: user.name, title: title, contents: contents, timestamp: timestamp, comments: [emptyComment], likes: "0")
+                let newPosting = Posting(identifier: String(Posting.identifier), userName: user.name, title: title, contents: contents, timestamp: timestamp, likes: "0")
                 viewModel.update(model: newPosting)
                 if self.image != nil {
                     viewModel.updateImage(image: self.image!)
