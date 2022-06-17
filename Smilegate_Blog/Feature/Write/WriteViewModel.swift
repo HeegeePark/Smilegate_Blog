@@ -18,10 +18,8 @@ class WriteViewModel {
     }
     // 게시글 올리기
     func updatePosting() {
-        let user = User.shared
         let dbManager = DatabaseManager.shared
         dbManager.updatePosting(posting!)
-//        Posting.identifier += 1
     }
     func updateImage(image: UIImage) {
         let manager = StorageManager.shared
